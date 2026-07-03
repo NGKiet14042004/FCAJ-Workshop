@@ -6,34 +6,33 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-> Đây là nơi tôi chia sẻ những trải nghiệm, cảm nhận và đóng góp ý kiến sau 12 tuần tham gia chương trình **First Cloud AI Journey** và thực hiện đồ án **ZeroBug Agent** trên nền tảng AWS.
-
 ### Đánh giá chung
 
 **1. Chất lượng chương trình học**
 
-Chương trình được thiết kế rất bài bản, từ kiến thức nền tảng (Free Tier, IAM, EC2, VPC, RDS, S3) cho đến các dịch vụ nâng cao (Bedrock, Lambda, Step Functions, Cognito, API Gateway). Lộ trình 12 tuần giúp tôi xây dựng kiến thức một cách có hệ thống, không bị ngợp bởi độ rộng của hệ sinh thái AWS. Đặc biệt, việc kết hợp lý thuyết với workshop thực hành giúp kiến thức được củng cố rất tốt.
+Chương trình được sắp xếp rõ ràng, đi từ kiến thức cơ bản đến các phần nâng cao hơn. Mỗi tuần có mục tiêu cụ thể nên tôi không bị ngợp khi mới làm quen với môi trường đám mây. Phần lý thuyết kết hợp với bài thực hành giúp tôi hiểu bài hơn, đặc biệt các tuần học về lưu trữ dữ liệu và cơ sở dữ liệu đã giúp tôi tự tin hơn khi bắt tay vào phần việc được giao trong đồ án nhóm.
 
 **2. Tài liệu và nguồn học tập**
 
-Tài liệu của chương trình chất lượng cao, viết rõ ràng và có hình ảnh minh họa chi tiết. Các workshop trên awsstudygroup.com được cập nhật thường xuyên và bám sát console AWS thực tế. Tuy nhiên, một số dịch vụ mới như **Amazon Bedrock AgentCore** chưa có tài liệu tiếng Việt đầy đủ, tôi phải tự tìm hiểu từ AWS documentation tiếng Anh.
+Tài liệu của chương trình và phần hướng dẫn đồ án viết dễ đọc, có hình minh họa và chia việc rõ cho từng thành viên. Nhờ vậy tôi biết mình cần làm gì, tránh làm trùng hoặc làm nhầm phần của bạn khác. Tuy nhiên, một số nội dung liên quan đến trí tuệ nhân tạo và cách lưu dữ liệu cho hệ thống AI vẫn khá mới, nên đôi lúc tôi phải tự đọc thêm tài liệu tiếng Anh để hiểu kỹ hơn.
 
 **3. Sự phù hợp giữa chương trình và đồ án**
 
-Các kiến thức học từ tuần 1 đến tuần 8 (IAM, EC2, RDS, S3, CloudFront...) đều được áp dụng trực tiếp vào kiến trúc ZeroBug Agent. Điều này tạo ra sự liên kết chặt chẽ giữa nội dung học và đồ án thực tế — tôi không chỉ học trên lý thuyết mà còn thực sự "hiểu tại sao" mỗi dịch vụ được chọn.
+Kiến thức học trong 12 tuần gắn khá sát với đồ án thực tế. Những gì tôi học về mạng, lưu trữ file, quản lý cơ sở dữ liệu và bảo mật thông tin đăng nhập đều dùng được khi triển khai ZeroBug Agent. Tôi cũng hiểu hơn vì sao nhóm chia công việc theo từng người thay vì để một người làm hết.
 
 **4. Cơ hội học hỏi và phát triển kỹ năng**
 
-12 tuần giúp tôi bước từ một người mới hoàn toàn với AWS đến người có thể thiết kế và triển khai một hệ thống đám mây production-grade. Đặc biệt, trải nghiệm tích hợp **Amazon Bedrock** và **Claude 3 Haiku** vào nghiệp vụ tự động sinh Unit Test là điểm nhấn kỹ thuật lớn nhất mà tôi có được từ chương trình.
+Sau 12 tuần, tôi thấy mình tiến bộ rõ so với lúc mới bắt đầu. Tôi được làm phần liên quan đến lưu trữ dữ liệu, thiết lập cơ sở dữ liệu và chuẩn bị nền cho tính năng AI của ứng dụng. Điều khiến tôi ấn tượng nhất là được tham gia xây dựng một sản phẩm thật cùng nhóm, từ lúc lên ý tưởng đến lúc ghép các phần lại với nhau.
 
 **5. Thử thách và bài học lớn nhất**
 
-- **Thách thức kỹ thuật khó nhất**: Cấu hình JWT Authorizer tích hợp đúng giữa Cognito User Pool và API Gateway, xử lý luồng token refresh cho SPA và đảm bảo CORS hoạt động trên cả môi trường dev lẫn production.
-- **Bài học quan trọng nhất**: Không bao giờ hardcode Access Key vào mã nguồn. Luôn dùng IAM Role và Temporary Credentials. Đây là nguyên tắc bảo mật đám mây cốt lõi tôi sẽ mang theo trong toàn bộ sự nghiệp.
+- **Khó nhất**: Thiết lập cơ sở dữ liệu sao cho vừa an toàn vừa đủ điều kiện để các thành viên khác kết nối và sử dụng sau này, đồng thời không để lộ mật khẩu trong mã nguồn.
+- **Cũng không dễ**: Làm việc nhóm trên cùng một tài khoản đám mây, phải bàn giao đúng thông tin và đúng thời điểm để người sau triển khai tiếp không bị kẹt.
+- **Bài học quan trọng**: Không nên ghi mật khẩu hay thông tin nhạy cảm trực tiếp vào code. Nên phân công rõ ràng, trao đổi thường xuyên và kiểm tra lại trước khi chuyển sang bước tiếp theo.
 
 **6. Chính sách và phúc lợi**
 
-Gói AWS Credit $200 được cung cấp thông qua chương trình là một phúc lợi rất thiết thực, giúp tôi thực hành mà không lo lắng về chi phí. Việc hướng dẫn rõ cách kiểm soát Budget và Billing Alerts từ đầu chương trình cũng giúp tôi tự tin thử nghiệm các dịch vụ mới.
+Gói credit $200 giúp tôi yên tâm thực hành mà không quá lo về chi phí. Chương trình cũng nhắc sớm về việc theo dõi ngân sách, nên tôi có thói quen kiểm tra chi phí và tắt/bỏ các tài nguyên không dùng sau khi xong bài.
 
 ---
 
@@ -41,20 +40,20 @@ Gói AWS Credit $200 được cung cấp thông qua chương trình là một ph
 
 - Điều bạn **hài lòng nhất** khi tham gia chương trình?
 
-  → Được thực hành trực tiếp trên môi trường AWS thực, xây dựng một sản phẩm hoàn chỉnh có thể đưa vào portfolio.
+  → Được làm việc trên môi trường thật, hoàn thành phần việc của mình trong đồ án nhóm và có sản phẩm để đưa vào portfolio.
 
 - Điều bạn nghĩ chương trình **cần cải thiện**?
 
-  → Có thể bổ sung thêm các buổi livestream Q&A hoặc office hours để người học có thể hỏi trực tiếp khi gặp vấn đề kỹ thuật phức tạp.
+  → Nên có thêm buổi hỏi đáp trực tiếp hoặc thời gian mentor hỗ trợ khi nhóm gặp lỗi khó trong quá trình triển khai đồ án.
 
 - Nếu giới thiệu cho bạn bè, bạn có **khuyên họ tham gia không**? Vì sao?
 
-  → Có, tôi sẽ giới thiệu cho bất kỳ ai muốn học Cloud và AI một cách thực chiến, đặc biệt các bạn sinh viên CNTT muốn bổ sung kỹ năng cloud thực tế vào CV.
+  → Có. Đây là chương trình phù hợp với sinh viên muốn học đi kèm thực hành, làm quen công nghệ đám mây và AI qua một dự án nhóm có tổ chức.
 
 ---
 
 ### Đề xuất và mong muốn
 
-- Mong chương trình bổ sung thêm module về **Kubernetes trên AWS (EKS)** và **DevOps CI/CD** (CodePipeline, CodeBuild) để hoàn thiện kỹ năng cloud engineer.
-- Mong có thêm nội dung hướng dẫn về **Multi-account AWS Organizations** và **AWS Control Tower** cho những ai muốn xây dựng hệ thống doanh nghiệp quy mô lớn.
-- Tiếp tục duy trì chương trình và mở rộng ra nhiều trường đại học hơn để cộng đồng AWS tại Việt Nam ngày càng phát triển.
+- Mong chương trình có thêm phần hướng dẫn quản lý thông tin nhạy cảm (mật khẩu, khóa truy cập…) theo cách an toàn hơn, vì đây là phần nhiều bạn hay gặp khó khi mới triển khai.
+- Mong có thêm ví dụ thực tế về cách kết hợp cơ sở dữ liệu với tính năng AI trong các dự án vừa và nhỏ, không chỉ dừng ở lý thuyết.
+- Tiếp tục duy trì mô hình đồ án nhóm có phân công rõ ràng và mở rộng cho nhiều sinh viên hơn tham gia.

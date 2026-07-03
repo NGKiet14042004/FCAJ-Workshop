@@ -6,31 +6,31 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Over the course of 12 weeks participating in the **First Cloud AI Journey** program, I went through an extensive learning and hands-on journey — from foundational AWS knowledge all the way to designing, building, and deploying the **ZeroBug Agent** system on a real cloud environment.
+Over 12 weeks in the **First Cloud AI Journey** program, I progressed from foundational AWS learning to hands-on deployment as part of the team **ZeroBug Agent** project. My assigned scope was **TV2 — Data & Secrets layer**.
 
-I participated in developing the **ZeroBug Agent** project — an AI Agent that automatically generates Unit Tests for software projects — using AWS infrastructure including Amazon Cognito, API Gateway, EC2, RDS, Bedrock, Lambda, Step Functions, S3, CloudFront, WAF, and CloudWatch. Through this, I improved my skills in **cloud architecture design, system security, CI/CD deployment, and AI integration**.
+My project responsibilities included: deploying **Amazon S3** (private bucket for source and JAR), **Amazon RDS PostgreSQL** (metadata, history, RAG vectors), **AWS Secrets Manager** (DB credentials), initializing **pgvector** and the `code_embeddings` table, and enabling **Bedrock Mantle model access** (chat + embedding) in `us-east-1`. After completion, I filled the shared parameter table and handed off to Toan (EC2/ALB) and Hoa (Lambda/Step Functions). Through this, I strengthened skills in **cloud storage design, credential security, RDS-based RAG integration**, and coordinated deployment following team dependencies.
 
-In terms of work ethic, I always strived to meet each week's objectives on time, proactively self-researched when encountering technical issues, and actively learned from official AWS documentation and the community.
+In terms of work ethic, I strived to meet weekly objectives on time, proactively researched technical issues (RDS private access, pgvector, cross-region Bedrock), and referenced official AWS documentation and Workshop content.
 
-To objectively reflect on my participation in the program, I would like to evaluate myself based on the following criteria:
+To objectively reflect on my participation, I evaluate myself based on the following criteria:
 
 | No. | Criteria                            | Description                                                                                                    | Good | Fair | Average |
 | --- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | AWS knowledge; applying it to design the ZeroBug Agent system; product quality                                 | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Quickly absorbing new knowledge about Cognito, API Gateway, Bedrock, and Step Functions                        | ✅    | ☐    | ☐       |
-| 3   | **Proactiveness**                   | Self-researching, proposing architecture ideas, and offering technical solutions without waiting for guidance   | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing worklogs on time and ensuring the quality of each project milestone                                  | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Maintaining a regular study and practice schedule each week throughout the 12 weeks                            | ☐    | ✅    | ☐       |
-| 6   | **Progressive mindset**             | Willingness to refactor code when finding better solutions; learning AWS best practices                         | ✅    | ☐    | ☐       |
-| 7   | **Communication**                   | Presenting system architecture and technical results clearly in the workshop report                             | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively when discussing technical solutions and integrating backend/frontend                         | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting processes, committing to information security, and adhering to AWS account usage rules               | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Analyzing and resolving errors that arose during the process of deploying the system to AWS                     | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project**         | Successfully designing and deploying the entire ZeroBug Agent system on the AWS Cloud platform                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire First Cloud AI Journey program participation                                   | ✅    | ☐    | ☐       |
+| 1   | **Professional knowledge & skills** | Understand how to deploy S3, RDS, Secrets Manager, pgvector, and Bedrock Mantle model access; applied to ZeroBug Agent | ☐    | ✅    | ☐       |
+| 2   | **Ability to learn**                | Quickly absorbed RDS, Secrets Manager, pgvector, and Bedrock Mantle within a short timeframe                    | ☐    | ✅    | ☐       |
+| 3   | **Proactiveness**                   | Self-researched how to use the infrastructure required for the project                                         | ✅    | ☐    | ☐       |
+| 4   | **Sense of responsibility**         | Completed worklogs on time and fully attended learning sessions and events (when approved)                     | ✅    | ☐    | ☐       |
+| 5   | **Discipline**                      | Maintained a regular study and practice schedule each week throughout the 12 weeks                            | ✅    | ☐    | ☐       |
+| 6   | **Progressive mindset**             | Willing to adjust RDS/S3/Secrets configuration when issues arose; learned AWS best practices                  | ☐    | ✅    | ☐       |
+| 7   | **Communication**                   | Presented and reported my assigned scope fully and clearly                                                     | ✅    | ☐    | ☐       |
+| 8   | **Teamwork**                        | Collaborated and shared ideas and experience with team members                                                 | ✅    | ☐    | ☐       |
+| 9   | **Professional conduct**            | Respected and worked well with team members and everyone in the workplace                                      | ✅    | ☐    | ☐       |
+| 10  | **Problem-solving skills**          | Resolved RDS connectivity, `vector` extension, Secrets get-value, and embedding dimension mismatch issues     | ☐    | ✅    | ☐       |
+| 11  | **Contribution to project**         | Successfully deployed TV2 (S3 + RDS + Secrets + pgvector + Bedrock model access) for ZeroBug Agent             | ☐    | ✅    | ☐       |
+| 12  | **Overall**                         | General evaluation of the entire First Cloud AI Journey program participation                                 | ☐    | ✅    | ☐       |
 
 ### Needs Improvement
 
-* Strengthen discipline and consistency in daily study habits; avoid leaving work to pile up at the end of the week.
-* Improve debugging skills and the ability to interpret CloudWatch logs when system issues arise.
-* Enhance technical presentation skills to make complex topics more understandable to those less familiar with cloud computing.
+* Change my self-study approach to gain a clearer understanding of AWS infrastructure.
+* Improve skills for deploying infrastructure in a coherent, structured way.
+* Enhance the ability to apply the AWS ecosystem to other projects.

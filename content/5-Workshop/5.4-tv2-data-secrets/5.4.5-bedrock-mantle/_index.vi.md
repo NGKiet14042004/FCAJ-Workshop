@@ -6,19 +6,21 @@ chapter: false
 pre: " <b> 5.4.5. </b> "
 ---
 
-#### Bước 1 — Bật Model access (region Mantle)
+#### Bước 1 — Lấy API Key từ Model catalog (Region Mantle)
 
-1. Console → **Amazon Bedrock** → đổi region **`us-east-1` (N. Virginia)** *(region endpoint Mantle)*.
-2. **Model access** (hoặc **Model catalog**) → bật quyền cho **cả hai** model:
-   - **`openai.gpt-oss-120b`** — sinh mã Unit Test (Chat Completions)
-   - **`cohere.embed-multilingual-v3`** — **bắt buộc** cho pipeline RAG (Embeddings)
-3. Đợi trạng thái **Access granted** cho từng model.
+1. Console → **Amazon Bedrock** → chuyển region sang **`us-east-1` (N. Virginia)** *(Region của Mantle endpoint)*.
+2. Vào **Model catalog** → tìm các model mà bạn sẽ tích hợp:
+   - **`openai.gpt-oss-120b`** — Sinh Unit Test (Chat Completions)
+   - **`cohere.embed-multilingual-v3`** — **Bắt buộc** cho luồng RAG (Embeddings)
+3. Tạo và copy trực tiếp **API Key** từ giao diện của model. Key này sẽ được sử dụng làm Bearer token trong các hàm Lambda của bạn.
 
 {{% notice info %}}
-Workshop triển khai VPC/Lambda ở **`ap-southeast-1`**, nhưng gọi inference qua **`bedrock-mantle.us-east-1.api.aws`** — **cross-region**. Ghi rõ trên [bảng tham số](../../5.2-prerequisites/5.2.3-parameter-table/).
+Workshop triển khai VPC/Lambda ở **`ap-southeast-1`**, nhưng gọi inference (suy luận AI) thông qua **`bedrock-mantle.us-east-1.api.aws`** — **xuyên vùng (cross-region)**. Ghi chép rõ điều này vào [bảng tham số](../../5.2-prerequisites/5.2.3-parameter-table/).
 {{% /notice %}}
 
-#### Bước 2 — Ghi tham số bàn giao Hoa
+![](/images/5-Workshop/5.4/30.png)
+
+#### Bước 2 — Tham số bàn giao cho Hoa
 
 | Tham số | Giá trị |
 | --- | --- |
@@ -27,63 +29,21 @@ Workshop triển khai VPC/Lambda ở **`ap-southeast-1`**, nhưng gọi inferenc
 | Embeddings path | `/v1/embeddings` |
 | Model ID (chat) | `openai.gpt-oss-120b` |
 | Model ID (embedding) | `cohere.embed-multilingual-v3` |
-| Embedding dimension | `1024` *(Cohere multilingual v3)* |
-| Mantle region | `us-east-1` |
-| Lambda region | `ap-southeast-1` |
-| Vector table (RDS) | `code_embeddings` *(pgvector — xem [5.4.4](../5.4.4-schema-jpa/))* |
-| RAG top-k | `5` *(gợi ý workshop)* |
+| Kích thước Embedding | `1024` *(Cohere multilingual v3)* |
+| Region của Mantle | `us-east-1` |
+| Region của Lambda | `ap-southeast-1` |
+| Bảng Vector (RDS) | `code_embeddings` *(pgvector — xem [5.4.4](../5.4.4-schema-jpa/))* |
+| RAG top-k | `5` *(Khuyến nghị của workshop)* |
 
-#### Bước 3 — RAG gọn (phương án A — workshop)
+#### Bước 3 — RAG tinh gọn (Option A — Workshop)
 
-Pipeline AI dùng **một Lambda Context Builder** (`ContextBuilderLambda`) làm toàn bộ bước vector — **không** tách Lambda embedding riêng, **không** OpenSearch.
+Luồng xử lý AI sử dụng một **Context Builder Lambda** (`ContextBuilderLambda`) duy nhất cho tất cả các bước liên quan đến vector — **không** tách riêng Lambda embedding, **không** dùng OpenSearch.
 
 ```mermaid
 flowchart LR
-  S3[S3 source] --> CB[ContextBuilderLambda]
+  S3[Nguồn S3] --> CB[ContextBuilderLambda]
   CB --> EMB["Mantle /v1/embeddings"]
   EMB --> RDS[(RDS pgvector<br/>code_embeddings)]
-  CB --> RET[Retrieve top-k]
+  CB --> RET[Truy xuất top-k]
   RET --> AI[BedrockInvokeLambda]
   AI --> CHAT["Mantle /v1/chat/completions"]
-```
-
-| Bước | Ai / đâu | Việc |
-| --- | --- | --- |
-| 1 | **Kiệt** | Bật model chat + embedding; chuẩn bị extension **pgvector** và bảng `code_embeddings` trên RDS ([5.4.4](../5.4.4-schema-jpa/)) |
-| 2 | **Hoa** — `ContextBuilderLambda` | Đọc file source từ S3 → chunk văn bản |
-| 3 | Cùng Lambda | Gọi **`POST /v1/embeddings`**, model `cohere.embed-multilingual-v3`, Bearer API key |
-| 4 | Cùng Lambda | Lưu vector vào **`code_embeddings`** (cột `embedding vector(1024)`) |
-| 5 | Cùng Lambda | Truy vấn **top-k** chunk liên quan `project_id` *(cosine / `<=>` pgvector)* |
-| 6 | **Hoa** — `BedrockInvokeLambda` | Nhận `context` từ Step Functions → **`POST /v1/chat/completions`** → sinh Unit Test |
-
-{{% notice note %}}
-**Kiệt** không triển khai Lambda — chỉ bật model và **hạ tầng vector trên RDS**. **Hoa** cấu hình API key + code Lambda theo [5.6.3](../../5.6-TV4-serverless/5.6.3-ai-invoke-bedrock-mantle/) *(chi tiết triển khai Lambda nằm ở mục 5.6)*.
-{{% /notice %}}
-
-**Payload embedding (gợi ý):**
-
-```json
-{
-  "model": "cohere.embed-multilingual-v3",
-  "input": ["đoạn code hoặc comment cần embed"],
-  "input_type": "search_document"
-}
-```
-
-Khi retrieve, dùng `input_type: "search_query"` cho câu hỏi / prompt tóm tắt. Vector truy vấn so khớp với chunk đã lưu (`search_document`).
-
-#### Hoa triển khai (mục 5.6)
-
-| Lambda | Vai trò |
-| --- | --- |
-| **`ContextBuilderLambda`** | Embed + lưu pgvector + retrieve → trả `context` |
-| **`BedrockInvokeLambda`** | Chat Completions với `context` + source |
-
-Cả hai Lambda:
-
-- Header `Authorization: Bearer <BEDROCK_MANTLE_API_KEY>` — key tạo từ Bedrock Console → **API keys** (TTL ~30 ngày), cấu hình **Environment variable** trên Lambda.
-- Chạy **VPC private subnet** → ra internet qua **NAT Gateway** (Trí) để tới `us-east-1`.
-
-→ Chi tiết deploy **`BedrockInvokeLambda`**: [Lambda — AI Invoke (Bedrock Mantle)](../../5.6-TV4-serverless/5.6.3-ai-invoke-bedrock-mantle/).
-
-<!-- Hình: /images/5-Workshop/5.4/bedrock-model-access.png — Bedrock Console, region us-east-1, Model access -->

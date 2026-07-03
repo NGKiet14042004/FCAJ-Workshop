@@ -8,9 +8,9 @@ pre: " <b> 1.9. </b> "
 
 ### Week 9 Objectives:
 
-* Research and develop the overall idea for the graduation project; identify the core problem and technologies.
+* Research and develop the overall idea for the ZeroBug Agent graduation project; identify the core problem and technologies.
 * Design an optimized, secure, and scalable System Architecture Diagram.
-* Compile and select appropriate AWS infrastructure services to deploy the project.
+* Define team roles and the **TV2 — Data & Secrets layer** (S3, RDS, Secrets, pgvector, Bedrock model access) owned by Kiet.
 
 ### Tasks to be carried out this week:
 <table class="worklog-table">
@@ -33,49 +33,49 @@ pre: " <b> 1.9. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Survey real-world topics, analyze user needs, and define the project's core objectives <br> - Choose an appropriate architecture model based on current technology strengths</td>
+      <td class="col-task">- Survey the ZeroBug Agent topic; analyze AI Unit Test generation requirements <br> - Define the flow: Import source → Context Builder (RAG) → Bedrock Mantle chat</td>
       <td class="col-date">06/15/2026</td>
       <td class="col-date">06/15/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">2</td>
-      <td class="col-task">- Draft the Data Flow and user interaction scenarios in the system <br> - Identify key business components to be implemented</td>
+      <td class="col-task">- Draft Data Flow: S3 source → Lambda embed → RDS pgvector → Mantle chat <br> - Assign 5 members: Tri → Kiet → Toan → Hoa → Trinh</td>
       <td class="col-date">06/16/2026</td>
       <td class="col-date">06/16/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">3</td>
-      <td class="col-task">- Design the overall High-Level Architecture diagram <br> - Define a multi-layer security model and divide Public/Private Subnets</td>
+      <td class="col-task">- Design the overall High-Level Architecture diagram <br> - Define Public/Private Subnets; RDS in Private Subnet (depends on Tri completing VPC first)</td>
       <td class="col-date">06/17/2026</td>
       <td class="col-date">06/17/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">4</td>
-      <td class="col-task">- List and analyze AWS compute/storage services to be used (EC2, S3, etc.) <br> - Choose the appropriate database solution (RDS for relational or DynamoDB for NoSQL)</td>
+      <td class="col-task">- Choose RDS PostgreSQL 15.x + pgvector for lightweight RAG (`code_embeddings` table, dimension 1024) <br> - Design a private S3 bucket for source and `deploy/` JAR prefix</td>
       <td class="col-date">06/18/2026</td>
       <td class="col-date">06/18/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">5</td>
-      <td class="col-task">- Research advanced AWS service integration: IAM authorization, CloudFront CDN, Lambda/Bedrock AI <br> - Evaluate the feasibility of AI integration for automating business features</td>
+      <td class="col-task">- Research Bedrock Mantle (`us-east-1`): chat model `openai.gpt-oss-120b` and embedding `cohere.embed-multilingual-v3` <br> - Plan Secrets Manager for RDS credentials (`zerobug/rds/credentials`)</td>
       <td class="col-date">06/19/2026</td>
       <td class="col-date">06/19/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Compile the AWS infrastructure catalog; compare against Free Tier limits to estimate operational costs <br> - Ensure the system is within budget control</td>
+      <td class="col-task">- Draft the shared parameter table (S3, RDS endpoint, Secret ARN, Mantle URL/models, vector table) <br> - Estimate RDS, NAT, and Bedrock inference costs; compare against Free Tier</td>
       <td class="col-date">06/20/2026</td>
       <td class="col-date">06/20/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">7</td>
-      <td class="col-task">- Complete the architecture documentation and infrastructure diagram <br> - Prepare a progress report and get ready to begin the implementation phase</td>
+      <td class="col-task">- Finalize architecture docs and TV2 deployment checklist (Workshop section 5.4) <br> - Prepare handoff: Kiet deploys after Tri completes IAM + VPC</td>
       <td class="col-date">06/21/2026</td>
       <td class="col-date">06/21/2026</td>
       <td class="col-ref"></td>
@@ -86,7 +86,7 @@ pre: " <b> 1.9. </b> "
 
 ### Week 9 Achievements:
 
-* Clearly defined the ZeroBug Agent graduation project idea with specific features and business flows.
-* Completed a clear, visual system architecture diagram following the AWS Well-Architected Framework.
-* Established a detailed list of required AWS services with clear configuration and authorization plans.
-* Ensured the architecture is highly feasible, leverages cloud computing, and optimizes Free Tier costs.
+* Clearly defined ZeroBug Agent with a lightweight RAG pipeline on RDS pgvector.
+* Completed the architecture diagram and role split: Kiet owns TV2 (S3 + RDS + Secrets + pgvector + Bedrock model access).
+* Established handoff parameters for Toan (S3, RDS, Secret) and Hoa (Mantle URL/models, `code_embeddings` table).
+* Ready to deploy infrastructure in order: Tri → Kiet → Toan → Hoa → Trinh.

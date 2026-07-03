@@ -8,9 +8,9 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Objectives:
 
-* Accept, package all source code and project infrastructure in its most complete state.
-* Finalize the graduation project documentation (Thesis Report) and presentation slides.
-* Prepare a demo environment ready for the project defense before the evaluation committee.
+* Finalize documentation and evidence for the **TV2 layer** (S3, RDS, Secrets, pgvector, Bedrock).
+* Prepare demo, thesis report, and data-layer resource cleanup per Workshop section 5.10.4.
+* Accept the ZeroBug Agent project with the team before the defense.
 
 ### Tasks to be carried out this week:
 <table class="worklog-table">
@@ -33,49 +33,49 @@ pre: " <b> 1.12. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Final Review of all project features running on AWS: no logic or display errors <br> - Code Freeze; prepare technical documentation packaging</td>
+      <td class="col-task">- Final review of TV2: S3, RDS, Secret, pgvector, Bedrock model access running stably <br> - Confirm the shared parameter table is complete before demo</td>
       <td class="col-date">07/06/2026</td>
       <td class="col-date">07/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">2</td>
-      <td class="col-task">- Compile technical specifications, AWS service configurations, and actual architecture diagrams into the Deployment Guide <br> - Capture evidence of the system running on AWS (Dashboard, CloudWatch, S3) for the report appendix</td>
+      <td class="col-task">- Compile Deployment Guide for Kiet's scope: S3, RDS, Secrets Manager, pgvector, Bedrock Mantle model access <br> - Capture evidence: RDS Console, Secrets, `\d code_embeddings`, Bedrock Model access</td>
       <td class="col-date">07/07/2026</td>
       <td class="col-date">07/07/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">3</td>
-      <td class="col-task">- Finalize the graduation thesis: write the "System Deployment on AWS Cloud" chapter in detail <br> - Format and align the report according to the university's standards</td>
+      <td class="col-task">- Write thesis chapter "Data & Secrets Layer Deployment on AWS" (TV2) <br> - Describe lightweight RAG: pgvector `code_embeddings`, Mantle chat + embedding cross-region</td>
       <td class="col-date">07/08/2026</td>
       <td class="col-date">07/08/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">4</td>
-      <td class="col-task">- Design presentation slides: highlight the real-world problem, AWS architecture, technologies used, and test results <br> - Prepare short screen-recording demo videos as a contingency plan for the defense</td>
+      <td class="col-task">- Prepare slides: TV2 role, data flow diagram S3 → RDS → Bedrock Mantle <br> - Record a short demo video of the data infrastructure for the appendix</td>
       <td class="col-date">07/09/2026</td>
       <td class="col-date">07/09/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">5</td>
-      <td class="col-task">- Perform a Dry Run of the defense scenario: self-examine questions about AWS infrastructure, security, and costs <br> - Prepare technical answers related to the architecture and services used</td>
+      <td class="col-task">- Defense Dry Run: questions on RDS private subnet, Secrets Manager, pgvector, Bedrock model access <br> - Explain why application schema is created by Toan (JPA) and vector table by Kiet</td>
       <td class="col-date">07/10/2026</td>
       <td class="col-date">07/10/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Restore the AWS system to its optimal state for the Live Demo before the committee <br> - Check bandwidth, public endpoint access, and service availability</td>
+      <td class="col-task">- Verify data layer ready for Live Demo; confirm RDS metrics and S3 bucket have demo data <br> - Prepare Kiet cleanup checklist: RDS → Subnet Group → Secrets → S3 empty + delete</td>
       <td class="col-date">07/11/2026</td>
       <td class="col-date">07/11/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">7</td>
-      <td class="col-task">- Complete the entire project, export report files (PDF/Word) and presentation slides <br> - Store all source code on GitHub/GitLab; ready for the official defense</td>
+      <td class="col-task">- Complete report, slides, and store source/Workshop docs on Git <br> - After acceptance: clean up RDS, DB Subnet Group, Secret `zerobug/rds/credentials`, S3 bucket per 5.10.4 order</td>
       <td class="col-date">07/12/2026</td>
       <td class="col-date">07/12/2026</td>
       <td class="col-ref"></td>
@@ -86,6 +86,6 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Achievements:
 
-* The graduation project is 100% complete in both the software product running live on AWS and the written documentation.
-* Possess a stable online demo system with good security and load capacity thanks to the AWS infrastructure.
-* Completed professional presentation slides, scientific thesis report, and prepared confidently for the defense.
+* Completed deployment documentation and thesis section for TV2 — Data & Secrets layer.
+* ZeroBug Agent demo stable; ready to answer questions on S3, RDS, Secrets, pgvector, and Bedrock Mantle.
+* Data-layer resources cleaned up per Workshop procedure, avoiding post-acceptance RDS/S3 costs.

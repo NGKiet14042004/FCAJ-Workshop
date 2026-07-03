@@ -18,16 +18,16 @@ pre: " <b> 1. </b> "
 
 **Week 5:** [Amazon S3, Static Website Hosting, and CloudFront](1.5-week5/)
 
-**Week 6:** [AWS knowledge review and application to team project](1.6-week6/)
+**Week 6:** [Advanced Amazon S3, Static Website Hosting, and CloudFront](1.6-week6/)
 
-**Week 7:** [Project deployment planning on AWS](1.7-week7/)
+**Week 7:** [Amazon RDS — EC2-to-database connection practice](1.7-week7/)
 
-**Week 8:** [System architecture, database, and UI/UX design](1.8-week8/)
+**Week 8:** [Amazon Lightsail — open-source application deployment](1.8-week8/)
 
-**Week 9:** [Research Route 53, CloudFront, and AWS WAF for Workshop](1.9-week9/)
+**Week 9:** [ZeroBug Agent project planning and architecture design](1.9-week9/)
 
-**Week 10:** [Deploy Route 53, CloudFront, and AWS WAF for ZeroBug Agent](1.10-week10/)
+**Week 10:** [Deploy the Data & Secrets layer (TV2) for ZeroBug Agent](1.10-week10/)
 
-**Week 11:** [Integrate AWS infrastructure into team system and testing](1.11-week11/)
+**Week 11:** [Monitor, test, and debug the ZeroBug Agent data layer](1.11-week11/)
 
 **Week 12:** [Finalize project, documentation, and acceptance](1.12-week12/)

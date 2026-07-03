@@ -18,16 +18,16 @@ pre: " <b> 1. </b> "
 
 **Tuần 5:** [Amazon S3, Static Website Hosting và CloudFront](1.5-week5/)
 
-**Tuần 6:** [Ôn tập kiến thức AWS và áp dụng vào đồ án nhóm](1.6-week6/)
+**Tuần 6:** [Amazon S3 nâng cao, Static Website Hosting và CloudFront](1.6-week6/)
 
-**Tuần 7:** [Lập kế hoạch triển khai đồ án trên AWS](1.7-week7/)
+**Tuần 7:** [Amazon RDS — thực hành kết nối EC2 và cơ sở dữ liệu](1.7-week7/)
 
-**Tuần 8:** [Thiết kế kiến trúc hệ thống, cơ sở dữ liệu và UI/UX](1.8-week8/)
+**Tuần 8:** [Amazon Lightsail — triển khai ứng dụng mã nguồn mở](1.8-week8/)
 
-**Tuần 9:** [Nghiên cứu Route 53, CloudFront và AWS WAF cho Workshop](1.9-week9/)
+**Tuần 9:** [Lập kế hoạch và thiết kế kiến trúc đồ án ZeroBug Agent](1.9-week9/)
 
-**Tuần 10:** [Triển khai Route 53, CloudFront và AWS WAF cho ZeroBug Agent](1.10-week10/)
+**Tuần 10:** [Triển khai lớp dữ liệu & bí mật (TV2) cho ZeroBug Agent](1.10-week10/)
 
-**Tuần 11:** [Tích hợp hạ tầng AWS vào hệ thống nhóm và kiểm thử](1.11-week11/)
+**Tuần 11:** [Giám sát, kiểm thử và debug khối dữ liệu ZeroBug Agent](1.11-week11/)
 
 **Tuần 12:** [Hoàn thiện đồ án, tài liệu và nghiệm thu](1.12-week12/)

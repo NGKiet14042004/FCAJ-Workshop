@@ -8,9 +8,9 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Khởi tạo và cấu hình các dịch vụ hạ tầng AWS cốt lõi theo sơ đồ kiến trúc đã thiết kế.
-* Triển khai mã nguồn ứng dụng (Back-end và Front-end) lên môi trường đám mây.
-* Thiết lập kết nối an toàn giữa máy chủ ứng dụng và hệ quản trị cơ sở dữ liệu trên AWS.
+* Triển khai **khối TV2 — Lớp dữ liệu & bí mật** cho ZeroBug Agent theo Workshop mục 5.4.
+* Thiết lập S3, RDS PostgreSQL, Secrets Manager, pgvector và bật Bedrock Mantle model access.
+* Hoàn thành checklist kiểm tra và bàn giao tham số cho Toàn và Hoa.
 
 ### Các công việc cần triển khai trong tuần này:
 <table class="worklog-table">
@@ -33,49 +33,49 @@ pre: " <b> 1.10. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Cấu hình môi trường mạng an toàn: tạo VPC, Public/Private Subnets, Internet Gateway và NAT Gateway <br> - Thiết lập Security Groups và Network ACLs kiểm soát luồng traffic</td>
+      <td class="col-task">- Nhận bàn giao từ Trí: Private Subnet A/B, `zerobug-rds-sg`, ARN `zerobug-ec2-role` & `zerobug-lambda-role` <br> - Rà soát bảng tham số chung và chuẩn bị triển khai TV2</td>
       <td class="col-date">22/06/2026</td>
       <td class="col-date">22/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">2</td>
-      <td class="col-task">- Khởi tạo Amazon RDS trong Private Subnet để đảm bảo an toàn dữ liệu <br> - Cấu hình tài khoản truy cập, phân quyền và import schema/seed data vào database</td>
+      <td class="col-task">- Tạo S3 bucket private `zerobug-projects-<suffix>` (ap-southeast-1), bật Block Public Access <br> - Test upload/download; ghi tên bucket vào bảng tham số</td>
       <td class="col-date">23/06/2026</td>
       <td class="col-date">23/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">3</td>
-      <td class="col-task">- Khởi tạo Amazon EC2 Instance làm Application Server <br> - Cấu hình Runtime environment, cài đặt công cụ bổ trợ và AWS CLI trên máy chủ</td>
+      <td class="col-task">- Tạo DB Subnet Group và RDS PostgreSQL 15.x (`zerobug-db`) trong Private Subnet, Public access = No <br> - Copy RDS endpoint; DB name `zerobug`</td>
       <td class="col-date">24/06/2026</td>
       <td class="col-date">24/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">4</td>
-      <td class="col-task">- Đóng gói và triển khai mã nguồn Back-end lên AWS <br> - Cấu hình biến môi trường và Connection String an toàn từ máy chủ tới RDS</td>
+      <td class="col-task">- Lưu credential RDS vào Secrets Manager (`zerobug/rds/credentials`), copy Secret ARN <br> - Chạy SQL pgvector: `CREATE EXTENSION vector` + bảng `code_embeddings` (vector 1024)</td>
       <td class="col-date">25/06/2026</td>
       <td class="col-date">25/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">5</td>
-      <td class="col-task">- Triển khai phần Front-end (host static files trên S3 + CloudFront hoặc AWS Amplify) <br> - Cấu hình đường dẫn API từ Front-end về đúng địa chỉ Back-end trên AWS</td>
+      <td class="col-task">- Bật Bedrock Mantle model access region `us-east-1`: `openai.gpt-oss-120b` và `cohere.embed-multilingual-v3` <br> - Ghi Mantle base URL, model ID, embedding dimension vào bảng tham số</td>
       <td class="col-date">26/06/2026</td>
       <td class="col-date">26/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Cấu hình phân quyền nâng cao với IAM Roles, loại bỏ Access Key tĩnh trong mã nguồn <br> - Upload media (hình ảnh, tài liệu) lên S3 Bucket và kiểm tra quyền truy cập</td>
+      <td class="col-task">- Chạy checklist xác nhận TV2: S3, RDS Available, Secret, pgvector, Bedrock Access granted <br> - Không tạo bảng ứng dụng bằng tay — để Toàn deploy JPA (`ddl-auto=update`)</td>
       <td class="col-date">27/06/2026</td>
       <td class="col-date">27/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">7</td>
-      <td class="col-task">- Chạy thử nghiệm End-to-End toàn bộ ứng dụng trên môi trường Cloud <br> - Đảm bảo các dịch vụ AWS phối hợp hoạt động mượt mà</td>
+      <td class="col-task">- Bàn giao Toàn: S3 bucket, RDS endpoint, Secret ARN DB <br> - Bàn giao Hoa: S3, Secret DB, RDS endpoint, Mantle URL/model, bảng `code_embeddings`, RAG top-k</td>
       <td class="col-date">28/06/2026</td>
       <td class="col-date">28/06/2026</td>
       <td class="col-ref"></td>
@@ -86,6 +86,6 @@ pre: " <b> 1.10. </b> "
 
 ### Kết quả đạt được tuần 10:
 
-* Xây dựng thành công hạ tầng mạng và lưu trữ an toàn trên AWS cho đồ án tốt nghiệp.
-* Triển khai đồng bộ Front-end và Back-end lên đám mây, kích hoạt cơ sở dữ liệu được quản lý hoàn toàn.
-* Hệ thống chạy ổn định, các thành phần kết nối chính xác và tuân thủ nguyên tắc bảo mật tài khoản.
+* Hoàn thành khối TV2: S3 private, RDS PostgreSQL, Secrets Manager, pgvector + `code_embeddings`.
+* Bật thành công Bedrock Mantle model access (chat + embedding) ở `us-east-1`.
+* Bảng tham số chung đã điền đủ; bàn giao thành công cho Toàn và Hoa theo checklist Workshop.

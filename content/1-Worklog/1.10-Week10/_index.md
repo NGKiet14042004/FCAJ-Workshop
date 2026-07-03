@@ -8,9 +8,9 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Create and configure core AWS infrastructure services according to the designed architecture diagram.
-* Deploy application source code (Back-end and Front-end) to the cloud environment.
-* Establish a secure connection between the application server and the database management system on AWS.
+* Deploy the **TV2 — Data & Secrets layer** for ZeroBug Agent per Workshop section 5.4.
+* Set up S3, RDS PostgreSQL, Secrets Manager, pgvector, and enable Bedrock Mantle model access.
+* Complete the verification checklist and hand off parameters to Toan and Hoa.
 
 ### Tasks to be carried out this week:
 <table class="worklog-table">
@@ -33,49 +33,49 @@ pre: " <b> 1.10. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Configure a secure network environment: create VPC, Public/Private Subnets, Internet Gateway, and NAT Gateway <br> - Set up Security Groups and Network ACLs to control traffic flow</td>
+      <td class="col-task">- Receive handoff from Tri: Private Subnet A/B, `zerobug-rds-sg`, ARN `zerobug-ec2-role` & `zerobug-lambda-role` <br> - Review the shared parameter table and prepare TV2 deployment</td>
       <td class="col-date">06/22/2026</td>
       <td class="col-date">06/22/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">2</td>
-      <td class="col-task">- Create Amazon RDS in a Private Subnet to ensure data security <br> - Configure access credentials, authorization, and import schema/seed data into the database</td>
+      <td class="col-task">- Create private S3 bucket `zerobug-projects-<suffix>` (ap-southeast-1), enable Block Public Access <br> - Test upload/download; record bucket name in the parameter table</td>
       <td class="col-date">06/23/2026</td>
       <td class="col-date">06/23/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">3</td>
-      <td class="col-task">- Launch an Amazon EC2 Instance as the Application Server <br> - Configure the Runtime environment, install required tools, and set up AWS CLI on the server</td>
+      <td class="col-task">- Create DB Subnet Group and RDS PostgreSQL 15.x (`zerobug-db`) in Private Subnet, Public access = No <br> - Copy RDS endpoint; DB name `zerobug`</td>
       <td class="col-date">06/24/2026</td>
       <td class="col-date">06/24/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">4</td>
-      <td class="col-task">- Package and deploy Back-end source code to AWS <br> - Configure environment variables and a secure Connection String from the server to RDS</td>
+      <td class="col-task">- Store RDS credentials in Secrets Manager (`zerobug/rds/credentials`), copy Secret ARN <br> - Run pgvector SQL: `CREATE EXTENSION vector` + `code_embeddings` table (vector 1024)</td>
       <td class="col-date">06/25/2026</td>
       <td class="col-date">06/25/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">5</td>
-      <td class="col-task">- Deploy the Front-end (host static files on S3 + CloudFront or AWS Amplify) <br> - Configure API paths from the Front-end to point to the correct Back-end address on AWS</td>
+      <td class="col-task">- Enable Bedrock Mantle model access in `us-east-1`: `openai.gpt-oss-120b` and `cohere.embed-multilingual-v3` <br> - Record Mantle base URL, model IDs, and embedding dimension in the parameter table</td>
       <td class="col-date">06/26/2026</td>
       <td class="col-date">06/26/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Configure advanced authorization using IAM Roles, eliminating static Access Keys from source code <br> - Upload media (images, documents) to S3 Bucket and verify public/private access permissions</td>
+      <td class="col-task">- Run TV2 verification checklist: S3, RDS Available, Secret, pgvector, Bedrock Access granted <br> - Do not create application tables manually — Toan deploys via JPA (`ddl-auto=update`)</td>
       <td class="col-date">06/27/2026</td>
       <td class="col-date">06/27/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">7</td>
-      <td class="col-task">- Run a full End-to-End test of the application on the Cloud environment <br> - Ensure all AWS services work together seamlessly</td>
+      <td class="col-task">- Hand off to Toan: S3 bucket, RDS endpoint, DB Secret ARN <br> - Hand off to Hoa: S3, DB Secret, RDS endpoint, Mantle URL/models, `code_embeddings` table, RAG top-k</td>
       <td class="col-date">06/28/2026</td>
       <td class="col-date">06/28/2026</td>
       <td class="col-ref"></td>
@@ -86,6 +86,6 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Achievements:
 
-* Successfully built a secure network and storage infrastructure on AWS for the graduation project.
-* Synchronously deployed both Front-end and Back-end to the cloud, activating a fully managed cloud database.
-* The system runs stably, with all components connected accurately and following account security principles.
+* Completed TV2: private S3, RDS PostgreSQL, Secrets Manager, pgvector + `code_embeddings`.
+* Successfully enabled Bedrock Mantle model access (chat + embedding) in `us-east-1`.
+* Shared parameter table filled; successful handoff to Toan and Hoa per Workshop checklist.

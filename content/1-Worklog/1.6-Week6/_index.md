@@ -90,3 +90,4 @@ pre: " <b> 1.6. </b> "
 * Proficient in configuring and securing a Static Website Host on S3, combined with CloudFront for acceleration and security.
 * Mastered advanced data lifecycle techniques: Versioning, Migration, and Multi-Region Replication.
 * Followed proper S3/CloudFront infrastructure cleanup procedures, maintaining good cost control.
+* Built S3 fundamentals for the next phase: a **private** bucket for ZeroBug Agent source/JAR (distinct from this week's Static Website Hosting lab).

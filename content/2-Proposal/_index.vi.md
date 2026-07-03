@@ -143,7 +143,7 @@ Thay vì chỉ gửi một file code rời rạc cho AI, người dùng import t
 
 #### 3.1. Sơ đồ kiến trúc
 
-![ZeroBug Agent Architecture](/images/2-Proposal/architecture.jfif)
+![ZeroBug Agent Architecture](/images/2-Proposal/architecture.png)
 
 #### 3.2. Dịch vụ AWS (production)
 

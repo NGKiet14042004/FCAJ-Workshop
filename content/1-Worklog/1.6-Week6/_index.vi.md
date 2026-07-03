@@ -90,3 +90,4 @@ pre: " <b> 1.6. </b> "
 * Thành thạo cấu hình và bảo mật Static Website Host trên S3, kết hợp CloudFront để tăng tốc và bảo mật hạ tầng.
 * Làm chủ kỹ thuật quản lý vòng đời dữ liệu: Versioning, Migration và Multi-Region Replication.
 * Tuân thủ quy trình dọn dẹp hạ tầng S3/CloudFront chuẩn xác, kiểm soát tốt chi phí sử dụng.
+* Nắm nền tảng S3 phục vụ giai đoạn sau: bucket **private** cho source/JAR đồ án ZeroBug Agent (khác Static Website Hosting lab tuần này).

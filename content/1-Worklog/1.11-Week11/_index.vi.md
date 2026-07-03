@@ -8,9 +8,9 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu tuần 11:
 
-* Thực hiện kiểm thử toàn diện hệ thống (Integration & Performance Testing) trên môi trường AWS.
-* Cấu hình các dịch vụ giám sát, cảnh báo lỗi và tối ưu hóa hiệu năng, chi phí cho hệ thống đám mây.
-* Sửa các lỗi phát sinh (Bug fixing) trong quá trình vận hành thực tế.
+* Giám sát và kiểm thử khối dữ liệu TV2 (S3, RDS, Secrets, pgvector, Bedrock model access) trên môi trường nhóm.
+* Cấu hình CloudWatch cho RDS, test Secrets get-value và debug pgvector khi tích hợp Lambda/EC2.
+* Hỗ trợ nhóm xử lý lỗi liên quan DB, Secret và embedding dimension trong kịch bản E2E.
 
 ### Các công việc cần triển khai trong tuần này:
 <table class="worklog-table">
@@ -33,49 +33,49 @@ pre: " <b> 1.11. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Tiến hành Integration Testing: đảm bảo luồng dữ liệu giữa Client, App Server và Database không bị lỗi <br> - Kiểm tra cơ chế phân quyền, xác thực người dùng và bảo mật API trên AWS</td>
+      <td class="col-task">- Xác nhận checklist E2E phần Kiệt: S3 upload OK; RDS Available; Secret DB; pgvector + `code_embeddings`; Bedrock model access <br> - Phối hợp nhóm chạy luồng Step Functions sau khi Toàn/Hoa triển khai xong</td>
       <td class="col-date">29/06/2026</td>
       <td class="col-date">29/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">2</td>
-      <td class="col-task">- Sử dụng Amazon CloudWatch thiết lập biểu đồ giám sát tài nguyên (CPU, RAM, Storage, Network) <br> - Cấu hình AWS Budget và CloudWatch Alarms gửi cảnh báo tự động khi vượt ngưỡng an toàn</td>
+      <td class="col-task">- Thiết lập CloudWatch metrics cho RDS (`CPUUtilization`, connections) <br> - Test Secrets get-value từ role EC2/Lambda; cấu hình alarm RDS CPU > 80%</td>
       <td class="col-date">30/06/2026</td>
       <td class="col-date">30/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">3</td>
-      <td class="col-task">- Thực hiện Load Testing hoặc giả lập kịch bản truy cập đồng thời để đánh giá khả năng chịu tải EC2 <br> - Ghi nhận Bottlenecks hệ thống qua CloudWatch Logs</td>
+      <td class="col-task">- Kiểm tra pgvector trên psql: `\dx` (extension vector), `\d code_embeddings` <br> - Debug lỗi `extension "vector" does not exist` hoặc dimension mismatch (1024)</td>
       <td class="col-date">01/07/2026</td>
       <td class="col-date">01/07/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">4</td>
-      <td class="col-task">- Tối ưu hóa hiệu năng mã nguồn Back-end và các câu lệnh truy vấn dữ liệu <br> - Áp dụng Cost Optimization: tắt hoặc giảm cấu hình tài nguyên không sử dụng</td>
+      <td class="col-task">- Kiểm tra kết nối RDS từ EC2 (Toàn) và Lambda (Hoa) qua Secret — không hardcode password <br> - Rà soát chi phí RDS và Bedrock inference trên Cost Explorer</td>
       <td class="col-date">02/07/2026</td>
       <td class="col-date">02/07/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">5</td>
-      <td class="col-task">- Sửa chữa lỗi logic, lỗi giao diện hoặc lỗi kết nối phát sinh từ môi trường Cloud <br> - Kiểm tra tính ổn định của các tính năng nâng cao trong đồ án (AI generation, lịch sử, monitor)</td>
+      <td class="col-task">- Hỗ trợ debug Bedrock Mantle: model access denied, embedding 400, timeout cross-region qua NAT <br> - Xác nhận model `cohere.embed-multilingual-v3` và dimension 1024 khớp bảng `code_embeddings`</td>
       <td class="col-date">03/07/2026</td>
       <td class="col-date">03/07/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Sao lưu dữ liệu toàn diện: tạo Amazon Machine Images (AMI) cho EC2 <br> - Tạo Snapshot cho RDS làm phương án dự phòng (Backup)</td>
+      <td class="col-task">- Tạo RDS Snapshot làm phương án backup dữ liệu metadata và vector RAG <br> - Kiểm tra S3 bucket còn object source và prefix `deploy/` cho JAR</td>
       <td class="col-date">04/07/2026</td>
       <td class="col-date">04/07/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">7</td>
-      <td class="col-task">- Chạy lại toàn bộ kịch bản kiểm thử (Regression Testing) để xác nhận hệ thống không còn lỗi nghiêm trọng <br> - Xác nhận trạng thái sẵn sàng cao nhất của hệ thống</td>
+      <td class="col-task">- Chạy Regression Testing phần data layer cùng nhóm (E2E checklist 5.8) <br> - Xác nhận khối TV2 ổn định trước giai đoạn hoàn thiện và demo</td>
       <td class="col-date">05/07/2026</td>
       <td class="col-date">05/07/2026</td>
       <td class="col-ref"></td>
@@ -86,6 +86,6 @@ pre: " <b> 1.11. </b> "
 
 ### Kết quả đạt được tuần 11:
 
-* Hệ thống đồ án được tối ưu hóa hiệu năng, hoạt động trơn tru dưới các kịch bản kiểm thử khác nhau.
-* Làm chủ CloudWatch phục vụ giám sát log và thiết lập thành công cơ chế cảnh báo tài chính/hiệu năng tự động.
-* Khắc phục triệt để lỗi vận hành đám mây, hoàn thành bộ dữ liệu backup an toàn cho toàn bộ kiến trúc.
+* Khối TV2 (S3, RDS, Secrets, pgvector, Bedrock model access) vận hành ổn định trên môi trường nhóm.
+* Thiết lập giám sát RDS và test Secrets thành công; xử lý được lỗi pgvector/embedding dimension.
+* Hoàn thành RDS Snapshot backup; sẵn sàng hỗ trợ demo và giai đoạn dọn tài nguyên tuần 12.

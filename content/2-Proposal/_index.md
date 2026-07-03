@@ -143,7 +143,7 @@ Sign up / Sign in (Amazon Cognito)
 
 #### 3.1. Architecture Diagram
 
-![ZeroBug Agent Architecture](/images/2-Proposal/architecture.jfif)
+![ZeroBug Agent Architecture](/images/2-Proposal/architecture.png)
 
 #### 3.2. AWS Services (Production)
 

@@ -47,7 +47,7 @@ This simplifies the entire research process into a conversation with an AI assis
 
 The system architecture combines multiple AWS services:
 
-![Protein Research Copilot Architecture with Amazon Bedrock AgentCore](images/3-BlogsPosted/3.3-Blog3/blog3.png)
+![Protein Research Copilot Architecture with Amazon Bedrock AgentCore](/images/3-BlogsPosted/3.3-Blog3/blog3.png)
 
 | Service | Role |
 | --- | --- |

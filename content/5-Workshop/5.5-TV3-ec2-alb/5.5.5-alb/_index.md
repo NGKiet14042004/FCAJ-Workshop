@@ -13,13 +13,13 @@ pre: " <b> 5.5.5. </b> "
 3. Health check path: **`/api/health`**.
 4. Register `zerobug-ec2` → select instance → **Include as pending below** → **Create pending** → **Save**.
 
-![](images/5-Workshop/5.5/18.png)
-![](images/5-Workshop/5.5/19.png)
-![](images/5-Workshop/5.5/20.png)
-![](images/5-Workshop/5.5/21.png)
-![](images/5-Workshop/5.5/22.png)
-![](images/5-Workshop/5.5/23.png)
-![](images/5-Workshop/5.5/24.png)
+![](/images/5-Workshop/5.5/18.png)
+![](/images/5-Workshop/5.5/19.png)
+![](/images/5-Workshop/5.5/20.png)
+![](/images/5-Workshop/5.5/21.png)
+![](/images/5-Workshop/5.5/22.png)
+![](/images/5-Workshop/5.5/23.png)
+![](/images/5-Workshop/5.5/24.png)
 
 #### ALB — `zerobug-alb`
 
@@ -40,8 +40,8 @@ pre: " <b> 5.5.5. </b> "
 
 Test: `http://<ALB-DNS>/api/health`
 
-![](images/5-Workshop/5.5/25.png)
-![](images/5-Workshop/5.5/26.png)
-![](images/5-Workshop/5.5/27.png)
-![](images/5-Workshop/5.5/28.png)
-![](images/5-Workshop/5.5/29.png)
+![](/images/5-Workshop/5.5/25.png)
+![](/images/5-Workshop/5.5/26.png)
+![](/images/5-Workshop/5.5/27.png)
+![](/images/5-Workshop/5.5/28.png)
+![](/images/5-Workshop/5.5/29.png)

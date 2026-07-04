@@ -14,7 +14,7 @@ Instead of having the Spring Boot application (on EC2) sequentially invoke each 
 The workflow is designed as a linear pipeline:
 `Import Project` → `Build Context (RAG)` → `File Tree` → `AI Invoke` → `Result And History`.
 
-![](images/5-Workshop/5.6/16.png)
+![](/images/5-Workshop/5.6/16.png)
 
 #### 2. Fault Tolerance (Error Handling & Retry)
 Communicating with AI models (LLMs) often involves high latency or temporary network failures (Timeouts/Rate Limits). In Step Functions, we configure a dedicated **Retrier** mechanism for the `AI Invoke` step:
@@ -24,4 +24,4 @@ Communicating with AI models (LLMs) often involves high latency or temporary net
 * **Max attempts:** Allows a maximum of 3 retries.
 * **Backoff rate (2.0):** Doubles the wait time after each failure (2s → 4s → 8s) to implement exponential backoff and reduce load on the AI system.
 
-![](images/5-Workshop/5.6/17.png)
+![](/images/5-Workshop/5.6/17.png)

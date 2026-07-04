@@ -47,7 +47,7 @@ Nhờ đó, toàn bộ quá trình nghiên cứu được đơn giản hóa thà
 
 Kiến trúc của hệ thống kết hợp nhiều dịch vụ AWS khác nhau:
 
-![Kiến trúc Protein Research Copilot với Amazon Bedrock AgentCore](images/3-BlogsPosted/3.3-Blog3/blog3.png)
+![Kiến trúc Protein Research Copilot với Amazon Bedrock AgentCore](/images/3-BlogsPosted/3.3-Blog3/blog3.png)
 
 | Dịch vụ | Vai trò |
 | --- | --- |

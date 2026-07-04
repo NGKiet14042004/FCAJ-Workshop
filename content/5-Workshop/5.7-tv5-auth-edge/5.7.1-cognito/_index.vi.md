@@ -18,10 +18,10 @@ pre: " <b> 5.7.1. </b> "
 
 → **Create user directory**. Đổi tên pool: **`zerobug-user-pool`** *(nếu cần)*.
 
-![](images/5-Workshop/5.7/1.png)
-![](images/5-Workshop/5.7/2.png)
-![](images/5-Workshop/5.7/3.png)
-![](images/5-Workshop/5.7/4.png)
+![](/images/5-Workshop/5.7/1.png)
+![](/images/5-Workshop/5.7/2.png)
+![](/images/5-Workshop/5.7/3.png)
+![](/images/5-Workshop/5.7/4.png)
 
 **Các tùy chọn wizard (nếu hiện thêm bước):**
 
@@ -53,17 +53,17 @@ pre: " <b> 5.7.1. </b> "
 
 Description tùy chọn. IAM role trong group **không cần** (chỉ dùng cho Identity Pool).
 
-![](images/5-Workshop/5.7/7.png)
-![](images/5-Workshop/5.7/8.png)
-![](images/5-Workshop/5.7/9.png)
+![](/images/5-Workshop/5.7/7.png)
+![](/images/5-Workshop/5.7/8.png)
+![](/images/5-Workshop/5.7/9.png)
 
 #### Tạo user test
 
 1. **Users** → **Create user** → `admin@gmail.com`, đặt password.
 2. **Add to group** → `ADMIN`.
 
-![](images/5-Workshop/5.7/5.png)
-![](images/5-Workshop/5.7/6.png)
+![](/images/5-Workshop/5.7/5.png)
+![](/images/5-Workshop/5.7/6.png)
 
 #### Lưu tham số
 

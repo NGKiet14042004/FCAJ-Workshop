@@ -82,7 +82,7 @@ Tasks such as search infrastructure management, data updates, result quality opt
 
 The service architecture shows a straightforward processing flow:
 
-![Amazon Bedrock AgentCore Web Search Tool Architecture](images/3-BlogsPosted/3.1-Blog1/blog1.png)
+![Amazon Bedrock AgentCore Web Search Tool Architecture](/images/3-BlogsPosted/3.1-Blog1/blog1.png)
 
 | Step | Description |
 | --- | --- |

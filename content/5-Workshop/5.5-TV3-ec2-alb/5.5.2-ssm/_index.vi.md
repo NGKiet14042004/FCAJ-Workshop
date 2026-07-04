@@ -8,7 +8,7 @@ pre: " <b> 5.5.2. </b> "
 
 1. EC2 → `zerobug-ec2` → **Connect** → **Session Manager** → **Connect**.
 
-![](images/5-Workshop/5.5/13.jpg)
+![](/images/5-Workshop/5.5/13.jpg)
 
 #### Lỗi: Ping Offline / `unable to acquire credentials`
 
@@ -19,7 +19,7 @@ pre: " <b> 5.5.2. </b> "
 | 3 | **Reboot instance** → đợi **3–5 phút** |
 | 4 | Kiểm tra NAT/route (Trí) — xem bảng bên dưới |
 
-![](images/5-Workshop/5.5/4.jpg)
+![](/images/5-Workshop/5.5/4.jpg)
 
 #### Lỗi `send request failed`
 

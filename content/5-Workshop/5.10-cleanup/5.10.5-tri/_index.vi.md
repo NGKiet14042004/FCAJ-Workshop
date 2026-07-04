@@ -18,7 +18,7 @@ Xóa **NAT Gateway và release Elastic IP trước** — đây là khoản phí 
 2. **Actions** → **Delete NAT gateway** → xác nhận.
 3. Đợi status **Deleted** (~ vài phút).
 
-![](images/5-Workshop/5.10/25.png)
+![](/images/5-Workshop/5.10/25.png)
 
 #### Bước 2 — Elastic IP
 
@@ -26,8 +26,8 @@ Xóa **NAT Gateway và release Elastic IP trước** — đây là khoản phí 
 2. Chọn EIP gắn NAT (Allocation ID từng dùng cho `zerobug-nat`).
 3. **Actions** → **Release Elastic IP addresses** → **Release**.
 
-![](images/5-Workshop/5.10/26.png)
-![](images/5-Workshop/5.10/27.png)
+![](/images/5-Workshop/5.10/26.png)
+![](/images/5-Workshop/5.10/27.png)
 
 #### Bước 3 — Internet Gateway
 
@@ -35,7 +35,7 @@ Xóa **NAT Gateway và release Elastic IP trước** — đây là khoản phí 
 2. **Actions** → **Detach from VPC** → chọn `zerobug-vpc`.
 3. **Actions** → **Delete internet gateway**.
 
-![](images/5-Workshop/5.10/28.png)
+![](/images/5-Workshop/5.10/28.png)
 
 #### Bước 4 — Security Groups
 
@@ -48,8 +48,8 @@ Xóa **NAT Gateway và release Elastic IP trước** — đây là khoản phí 
 
 Nếu báo **dependency**: kiểm tra RDS/EC2/Lambda/ALB đã xóa hết (mục 5.10.1–5.10.4).
 
-![](images/5-Workshop/5.10/29.png)
-![](images/5-Workshop/5.10/30.png)
+![](/images/5-Workshop/5.10/29.png)
+![](/images/5-Workshop/5.10/30.png)
 
 #### Bước 5 — Subnets
 
@@ -60,14 +60,14 @@ Nếu báo **dependency**: kiểm tra RDS/EC2/Lambda/ALB đã xóa hết (mục 
 
 *(Tên thực tế có thể khác — xóa mọi subnet thuộc VPC ZeroBug.)*
 
-![](images/5-Workshop/5.10/31.png)
+![](/images/5-Workshop/5.10/31.png)
 
 #### Bước 6 — Route Tables
 
 1. **Route tables** — xóa route table **custom** (private/public) không còn subnet associate.
 2. **Main** route table của VPC — xóa route `0.0.0.0/0` → IGW/NAT nếu còn.
 
-![](images/5-Workshop/5.10/32.png)
+![](/images/5-Workshop/5.10/32.png)
 
 #### Bước 7 — VPC
 
@@ -76,7 +76,7 @@ Nếu báo **dependency**: kiểm tra RDS/EC2/Lambda/ALB đã xóa hết (mục 
 
 Nếu lỗi dependency: **VPC** → **Resource map** / tab **Details** — tìm ENI, subnet group, endpoint còn sót.
 
-![](images/5-Workshop/5.10/33.png)
+![](/images/5-Workshop/5.10/33.png)
 
 #### Bước 8 — IAM Roles (tùy chọn — sau khi mọi dịch vụ đã xóa)
 
@@ -88,7 +88,7 @@ Nếu lỗi dependency: **VPC** → **Resource map** / tab **Details** — tìm 
 
 Xóa **instance profile** tự tạo (nếu có) trước khi xóa role EC2.
 
-![](images/5-Workshop/5.10/34.png)
+![](/images/5-Workshop/5.10/34.png)
 
 #### Checklist xác nhận
 

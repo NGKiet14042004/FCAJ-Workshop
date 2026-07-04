@@ -139,7 +139,7 @@ Mantle authentication: Bearer token **`BEDROCK_MANTLE_API_KEY`** in Lambda envir
 
 #### 3.1. Architecture Diagram
 
-![ZeroBug Agent Architecture](images/2-Proposal/architecture.png)
+![ZeroBug Agent Architecture](/images/2-Proposal/architecture.png)
 
 #### 3.2. AWS Services (Production)
 

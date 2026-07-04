@@ -18,10 +18,10 @@ pre: " <b> 5.7.1. </b> "
 
 → **Create user directory**. Rename pool: **`zerobug-user-pool`** *(if needed)*.
 
-![](images/5-Workshop/5.7/1.png)
-![](images/5-Workshop/5.7/2.png)
-![](images/5-Workshop/5.7/3.png)
-![](images/5-Workshop/5.7/4.png)
+![](/images/5-Workshop/5.7/1.png)
+![](/images/5-Workshop/5.7/2.png)
+![](/images/5-Workshop/5.7/3.png)
+![](/images/5-Workshop/5.7/4.png)
 
 **Additional wizard options (if extra steps appear):**
 
@@ -53,17 +53,17 @@ pre: " <b> 5.7.1. </b> "
 
 Description optional. IAM role in group **not required** (only used for Identity Pool).
 
-![](images/5-Workshop/5.7/7.png)
-![](images/5-Workshop/5.7/8.png)
-![](images/5-Workshop/5.7/9.png)
+![](/images/5-Workshop/5.7/7.png)
+![](/images/5-Workshop/5.7/8.png)
+![](/images/5-Workshop/5.7/9.png)
 
 #### Create test user
 
 1. **Users** → **Create user** → `admin@gmail.com`, set password.
 2. **Add to group** → `ADMIN`.
 
-![](images/5-Workshop/5.7/5.png)
-![](images/5-Workshop/5.7/6.png)
+![](/images/5-Workshop/5.7/5.png)
+![](/images/5-Workshop/5.7/6.png)
 
 #### Save parameters
 

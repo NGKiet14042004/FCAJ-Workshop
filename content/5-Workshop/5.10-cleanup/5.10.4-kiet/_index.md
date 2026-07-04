@@ -17,20 +17,20 @@ Delete **RDS after** Toàn/Hoa have terminated (no active connections). **S3** m
 
 Wait until status disappears (~ a few minutes).
 
-![](images/5-Workshop/5.10/21.png)
+![](/images/5-Workshop/5.10/21.png)
 
 #### Step 2 — DB Subnet Group
 
 1. **RDS** → **Subnet groups** → `zerobug-db-subnet-group`.
 2. **Delete** *(only when no DB instance remains)*.
 
-![](images/5-Workshop/5.10/22.png)
+![](/images/5-Workshop/5.10/22.png)
 
 #### Step 3 — AWS Secrets Manager
 
 1. **Secrets Manager** → secret **`zerobug/rds/credentials`** → **Delete secret**.
 
-![](images/5-Workshop/5.10/24.png)
+![](/images/5-Workshop/5.10/24.png)
 
 #### Step 4 — Amazon S3
 
@@ -38,7 +38,7 @@ Wait until status disappears (~ a few minutes).
 2. Tab **Objects** — select **Empty** (delete all objects, including prefix `deploy/zerobug-agent-app-1.0.0.jar` and project source).
 3. **Delete bucket** → type bucket name to confirm.
 
-![](images/5-Workshop/5.10/23.png)
+![](/images/5-Workshop/5.10/23.png)
 
 {{% notice warning %}}
 Bucket **not empty** cannot be deleted. Enable **Show versions** if bucket has versioning and delete delete markers too.

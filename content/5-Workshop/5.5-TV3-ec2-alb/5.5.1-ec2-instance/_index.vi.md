@@ -24,19 +24,19 @@ pre: " <b> 5.5.1. </b> "
 | Ubuntu + t3 incompatible | Chọn AMI **Arm** với `t3.*` | Chọn x86, hoặc AMI Arm + **`t4g.*`** |
 | SQL/Marketplace AMI | Chọn nhầm AMI trả phí | Quick Start → Ubuntu Free tier |
 
-![](images/5-Workshop/5.5/5.jpg)
-![](images/5-Workshop/5.5/6.jpg)
-![](images/5-Workshop/5.5/7.jpg)
+![](/images/5-Workshop/5.5/5.jpg)
+![](/images/5-Workshop/5.5/6.jpg)
+![](/images/5-Workshop/5.5/7.jpg)
 
 5. Key pair: `zerobug-key`.
 6. **Network:** VPC `zerobug-vpc`, Subnet **`zerobug-private-a`**, Public IP **Disable**, SG **`zerobug-ec2-sg`**.
 7. **IAM instance profile:** **`zerobug-ec2-role`**. Nếu dropdown trống → **Specify a custom value** → `zerobug-ec2-role`.
 
-![](images/5-Workshop/5.5/8.jpg)
-![](images/5-Workshop/5.5/9.jpg)
-![](images/5-Workshop/5.5/10.jpg)
-![](images/5-Workshop/5.5/11.jpg)
-![](images/5-Workshop/5.5/12.jpg)
+![](/images/5-Workshop/5.5/8.jpg)
+![](/images/5-Workshop/5.5/9.jpg)
+![](/images/5-Workshop/5.5/10.jpg)
+![](/images/5-Workshop/5.5/11.jpg)
+![](/images/5-Workshop/5.5/12.jpg)
 
 {{% notice tip %}}
 Lỗi `iam:ListInstanceProfiles`: xem [5.3.1 — PassRole policy](../../5.3-tv1-iam-vpc/5.3.1-iam-users-groups/) — đăng xuất/đăng nhập lại sau khi Trí thêm PassRole policy. Có thể gắn role sau: **Actions → Security → Modify IAM role** → **Update IAM role**.
@@ -45,4 +45,4 @@ Lỗi `iam:ListInstanceProfiles`: xem [5.3.1 — PassRole policy](../../5.3-tv1-
 8. **Launch instance**.
 9. Đợi **Status checks: 2/2 passed** trước khi Connect SSM.
 
-![](images/5-Workshop/5.5/13.jpg)
+![](/images/5-Workshop/5.5/13.jpg)

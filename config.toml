@@ -1,6 +1,6 @@
 baseURL = "https://ngkiet14042004.github.io/FCAJ-Workshop/"
-relativeURLs = true
-canonifyURLs = true
+relativeURLs = false
+canonifyURLs = false
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo

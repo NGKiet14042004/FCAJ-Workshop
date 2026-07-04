@@ -11,9 +11,9 @@ pre: " <b> 5.3.5. </b> "
 1. **Internet gateways** → **Create internet gateway** → Name: `zerobug-igw` → **Create**.
 2. Select IGW → **Actions** → **Attach to VPC** → `zerobug-vpc` → **Attach**.
 
-![](images/5-Workshop/5.3/31.jpg)
-![](images/5-Workshop/5.3/32.png)
-![](images/5-Workshop/5.3/33.png)
+![](/images/5-Workshop/5.3/31.jpg)
+![](/images/5-Workshop/5.3/32.png)
+![](/images/5-Workshop/5.3/33.png)
 
 #### NAT Gateway
 
@@ -27,8 +27,8 @@ NAT allows **private** subnets to reach the internet: EC2/SSM, S3 artifact downl
 6. → **Create**. Wait until **Available** (a few minutes).
 7. Copy **NAT Gateway ID**.
 
-![](images/5-Workshop/5.3/34.png)
-![](images/5-Workshop/5.3/35.png)
+![](/images/5-Workshop/5.3/34.png)
+![](/images/5-Workshop/5.3/35.png)
 
 {{% notice warning %}}
 **NAT is not free tier** (~0.045 USD/hour). Create only **1 NAT** (not one per AZ). Delete + release Elastic IP when finished (section 5.10).

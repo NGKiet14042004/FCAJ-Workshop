@@ -17,20 +17,20 @@ Xóa **RDS sau** khi Toàn/Hoa đã terminate (không còn kết nối). **S3** 
 
 Đợi status biến mất (~ vài phút).
 
-![](images/5-Workshop/5.10/21.png)
+![](/images/5-Workshop/5.10/21.png)
 
 #### Bước 2 — DB Subnet Group
 
 1. **RDS** → **Subnet groups** → `zerobug-db-subnet-group`.
 2. **Delete** *(chỉ khi không còn DB instance)*.
 
-![](images/5-Workshop/5.10/22.png)
+![](/images/5-Workshop/5.10/22.png)
 
 #### Bước 3 — AWS Secrets Manager
 
 1. **Secrets Manager** → secret **`zerobug/rds/credentials`** → **Delete secret**.
 
-![](images/5-Workshop/5.10/24.png)
+![](/images/5-Workshop/5.10/24.png)
 
 #### Bước 4 — Amazon S3
 
@@ -38,7 +38,7 @@ Xóa **RDS sau** khi Toàn/Hoa đã terminate (không còn kết nối). **S3** 
 2. Tab **Objects** — chọn **Empty** (xóa mọi object, gồm prefix `deploy/zerobug-agent-app-1.0.0.jar` và source project).
 3. **Delete bucket** → gõ tên bucket xác nhận.
 
-![](images/5-Workshop/5.10/23.png)
+![](/images/5-Workshop/5.10/23.png)
 
 {{% notice warning %}}
 Bucket **không empty** sẽ không xóa được. Bật **Show versions** nếu bucket có versioning và xóa cả delete markers.

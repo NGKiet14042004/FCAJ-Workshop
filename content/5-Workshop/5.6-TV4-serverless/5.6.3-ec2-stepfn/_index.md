@@ -16,10 +16,10 @@ First, we need to create a Role to grant the EC2 instance permission to communic
 3. On the **Add permissions** page, search for and check the `AmazonSSMManagedInstanceCore` policy (This grants baseline access to securely manage your instance via Session Manager).
 4. Proceed to the final step, name the Role `ZeroBug-App-Role`, and click **Create role**.
 
-![](images/5-Workshop/5.6/18.png)
-![](images/5-Workshop/5.6/19.png)
-![](images/5-Workshop/5.6/20.png)
-![](images/5-Workshop/5.6/21.png)
+![](/images/5-Workshop/5.6/18.png)
+![](/images/5-Workshop/5.6/19.png)
+![](/images/5-Workshop/5.6/20.png)
+![](/images/5-Workshop/5.6/21.png)
 
 #### 2. Granting Step Functions Execution Rights (Inline Policy)
 By default, `ZeroBug-App-Role` cannot interfere with automation state machines. We must attach a specific Inline Policy to grant this permission:
@@ -27,7 +27,7 @@ By default, `ZeroBug-App-Role` cannot interfere with automation state machines. 
 1. Click on the newly created `ZeroBug-App-Role` from the list.
 2. Under the **Permissions** tab, open the **Add permissions** dropdown → Select **Create inline policy**.
 
-![](images/5-Workshop/5.6/22.png)
+![](/images/5-Workshop/5.6/22.png)
 
 3. Switch the editor to the **JSON** tab and paste the following permission block (Make sure to replace the ARN string with your actual State Machine ARN):
 
@@ -46,7 +46,7 @@ By default, `ZeroBug-App-Role` cannot interfere with automation state machines. 
 ```
 Click save to enforce the policy modifications.
 
-![](images/5-Workshop/5.6/23.png)
+![](/images/5-Workshop/5.6/23.png)
 
 > ⚠️ **MANDATORY ACTION:** Once the IAM configurations are complete, return to the **EC2 Instances** dashboard → Select your project server instance → Choose **Actions** → **Security** → **Modify IAM role** → Select `ZeroBug-App-Role` and hit **Update** to officially apply the role to your instance.
 

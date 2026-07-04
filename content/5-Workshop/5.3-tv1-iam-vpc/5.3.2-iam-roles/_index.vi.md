@@ -20,12 +20,12 @@ Tạo **3 Role** trước — Toàn gắn vào EC2, Hoa gắn vào Lambda & Step
    - `AmazonSSMManagedInstanceCore` *(Toàn — Session Manager)*
 4. **Next** → Role name: `zerobug-ec2-role` → **Create role**.
 
-![](images/5-Workshop/5.3/8.jpg)
-![](images/5-Workshop/5.3/9.jpg)
-![](images/5-Workshop/5.3/10.jpg)
-![](images/5-Workshop/5.3/11.jpg)
-![](images/5-Workshop/5.3/12.jpg)
-![](images/5-Workshop/5.3/13.jpg)
+![](/images/5-Workshop/5.3/8.jpg)
+![](/images/5-Workshop/5.3/9.jpg)
+![](/images/5-Workshop/5.3/10.jpg)
+![](/images/5-Workshop/5.3/11.jpg)
+![](/images/5-Workshop/5.3/12.jpg)
+![](/images/5-Workshop/5.3/13.jpg)
 
 #### Role Lambda — `zerobug-lambda-role`
 

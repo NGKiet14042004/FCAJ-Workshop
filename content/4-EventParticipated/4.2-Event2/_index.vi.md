@@ -158,4 +158,4 @@ Không gian **Networking** tại sự kiện tạo điều kiện tiếp xúc, t
 
 #### Một số hình ảnh khi tham gia sự kiện
 
-*Thêm các hình ảnh của bạn tại đây*
+![](/images/4-EventParticipated/Event-2.jpg)

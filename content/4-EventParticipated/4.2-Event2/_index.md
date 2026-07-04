@@ -143,7 +143,7 @@ Attending the **FCAJ Community Day** conference delivered significant academic a
 
 ### VI. Real-World Event Experience and Reflections
 
-Directly participating in **FCAJ Community Day June 2026** was an extremely valuable technology experience. The event opened a panoramic lens helping me keep pace with pioneering waves in Cloud Computing, autonomous AI Agent models, and modern DevOps culture.
+Directly participating in **FCAJ Community Day** was an extremely valuable technology experience. The event opened a panoramic lens helping me keep pace with pioneering waves in Cloud Computing, autonomous AI Agent models, and modern DevOps culture.
 
 I was particularly captivated by the two sessions on **Agentic AI** and **AWS DevOps Agent** — these solutions go beyond theory and have proven their ability to thoroughly solve real-world operations automation problems.
 

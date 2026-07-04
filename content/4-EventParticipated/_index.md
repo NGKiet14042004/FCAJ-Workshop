@@ -6,16 +6,6 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-
-During the First Cloud AI Journey program, I participated in two important community technology events. Each one brought new knowledge about Cloud, AI, and Agentic Applications, along with opportunities to connect with industry experts.
-
 ### [Event 1](4.1-Event1/)  
 &emsp;**Event Name:** FCAJ Community Day  
 

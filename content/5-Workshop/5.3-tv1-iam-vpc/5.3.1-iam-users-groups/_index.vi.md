@@ -14,7 +14,7 @@ Tạo IAM Group và User (`tri`, `kiet`, `toan`, `hoa`, `trinh`) cho cả nhóm;
 
 1. Thanh search Console → gõ `IAM` → mở **IAM**.
 
-![](/images/5-Workshop/5.3/1.jpg)
+![](images/5-Workshop/5.3/1.jpg)
 
 #### Bước 2 — Tạo Group
 
@@ -23,8 +23,8 @@ Tạo IAM Group và User (`tri`, `kiet`, `toan`, `hoa`, `trinh`) cho cả nhóm;
 3. **Attach permissions policies** → tích **`PowerUserAccess`**.
 4. → **Create group**.
 
-![](/images/5-Workshop/5.3/2.jpg)
-![](/images/5-Workshop/5.3/3.jpg)
+![](images/5-Workshop/5.3/2.jpg)
+![](images/5-Workshop/5.3/3.jpg)
 
 #### Bước 3 — Inline policy PassRole
 
@@ -83,10 +83,10 @@ Lặp lại cho `tri`, `kiet`, `toan`, `hoa`, `trinh` (tương ứng Trí, Kiệ
 4. **Add user to group** → tích `zerobug-team`.
 5. → **Create user**.
 
-![](/images/5-Workshop/5.3/4.jpg)
-![](/images/5-Workshop/5.3/5.jpg)
-![](/images/5-Workshop/5.3/6.jpg)
-![](/images/5-Workshop/5.3/7.jpg)
+![](images/5-Workshop/5.3/4.jpg)
+![](images/5-Workshop/5.3/5.jpg)
+![](images/5-Workshop/5.3/6.jpg)
+![](images/5-Workshop/5.3/7.jpg)
 
 #### Bước 5 — Lưu Console sign-in URL
 

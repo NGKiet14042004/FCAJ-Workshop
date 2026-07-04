@@ -67,7 +67,7 @@ Notably, AWS uses an **Event-Driven** architecture for data synchronization. Whe
 
 The solution includes two main flows:
 
-![Scalable User Search Layer Architecture on Amazon Cognito](/images/3-BlogsPosted/3.2-Blog2/blog2.png)
+![Scalable User Search Layer Architecture on Amazon Cognito](images/3-BlogsPosted/3.2-Blog2/blog2.png)
 
 ### User Interaction with Cognito
 

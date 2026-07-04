@@ -19,7 +19,7 @@ Xóa **theo thứ tự bên dưới** — Trinh làm **đầu tiên** trong quy 
 3. **Disable** → đợi trạng thái **Deployed** (~5–15 phút).
 4. **Delete** distribution.
 
-![](/images/5-Workshop/5.10/1.png)
+![](images/5-Workshop/5.10/1.png)
 
 #### Bước 2 — API Gateway
 
@@ -29,11 +29,11 @@ Xóa **theo thứ tự bên dưới** — Trinh làm **đầu tiên** trong quy 
 4. **Authorizers** → xóa `zerobug-cognito-auth`.
 5. **Actions** → **Delete API** → xác nhận `zerobug-api`.
 
-![](/images/5-Workshop/5.10/2.png)
-![](/images/5-Workshop/5.10/3.png)
-![](/images/5-Workshop/5.10/4.png)
-![](/images/5-Workshop/5.10/5.png)
-![](/images/5-Workshop/5.10/6.png)
+![](images/5-Workshop/5.10/2.png)
+![](images/5-Workshop/5.10/3.png)
+![](images/5-Workshop/5.10/4.png)
+![](images/5-Workshop/5.10/5.png)
+![](images/5-Workshop/5.10/6.png)
 
 
 #### Bước 3 — Amazon Cognito
@@ -44,10 +44,10 @@ Xóa **theo thứ tự bên dưới** — Trinh làm **đầu tiên** trong quy 
 4. **Users** → xóa user test (`admin@gmail.com`, …).
 5. **Delete user pool** `zerobug-user-pool`.
 
-![](/images/5-Workshop/5.10/7.png)
-![](/images/5-Workshop/5.10/8.png)
-![](/images/5-Workshop/5.10/9.png)
-![](/images/5-Workshop/5.10/10.png)
+![](images/5-Workshop/5.10/7.png)
+![](images/5-Workshop/5.10/8.png)
+![](images/5-Workshop/5.10/9.png)
+![](images/5-Workshop/5.10/10.png)
 
 #### Bước 4 — CloudWatch Logs (tùy chọn)
 

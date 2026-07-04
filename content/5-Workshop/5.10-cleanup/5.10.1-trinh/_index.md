@@ -19,7 +19,7 @@ Delete **in the order below** — Trinh goes **first** in the cleanup process (r
 3. **Disable** → wait for status **Deployed** (~5–15 minutes).
 4. **Delete** distribution.
 
-![](/images/5-Workshop/5.10/1.png)
+![](images/5-Workshop/5.10/1.png)
 
 #### Step 2 — API Gateway
 
@@ -29,11 +29,11 @@ Delete **in the order below** — Trinh goes **first** in the cleanup process (r
 4. **Authorizers** → delete `zerobug-cognito-auth`.
 5. **Actions** → **Delete API** → confirm `zerobug-api`.
 
-![](/images/5-Workshop/5.10/2.png)
-![](/images/5-Workshop/5.10/3.png)
-![](/images/5-Workshop/5.10/4.png)
-![](/images/5-Workshop/5.10/5.png)
-![](/images/5-Workshop/5.10/6.png)
+![](images/5-Workshop/5.10/2.png)
+![](images/5-Workshop/5.10/3.png)
+![](images/5-Workshop/5.10/4.png)
+![](images/5-Workshop/5.10/5.png)
+![](images/5-Workshop/5.10/6.png)
 
 
 #### Step 3 — Amazon Cognito
@@ -44,10 +44,10 @@ Delete **in the order below** — Trinh goes **first** in the cleanup process (r
 4. **Users** → delete test users (`admin@gmail.com`, …).
 5. **Delete user pool** `zerobug-user-pool`.
 
-![](/images/5-Workshop/5.10/7.png)
-![](/images/5-Workshop/5.10/8.png)
-![](/images/5-Workshop/5.10/9.png)
-![](/images/5-Workshop/5.10/10.png)
+![](images/5-Workshop/5.10/7.png)
+![](images/5-Workshop/5.10/8.png)
+![](images/5-Workshop/5.10/9.png)
+![](images/5-Workshop/5.10/10.png)
 
 #### Step 4 — CloudWatch Logs (optional)
 

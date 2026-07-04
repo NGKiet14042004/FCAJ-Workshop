@@ -14,8 +14,8 @@ pre: " <b> 5.6.1. </b> "
 4. **Runtime:** Select `Java 17`.
 5. Click **Create function**.
 
-![](/images/5-Workshop/5.6/1.png)
-![](/images/5-Workshop/5.6/2.png)
+![](images/5-Workshop/5.6/1.png)
+![](images/5-Workshop/5.6/2.png)
 
 Repeat the steps above to create a total of 5 Lambda functions for the system:
 * `FileTreeLambda`
@@ -24,7 +24,7 @@ Repeat the steps above to create a total of 5 Lambda functions for the system:
 * `ProjectImportLambda`
 * `RagContextLambda`
 
-![](/images/5-Workshop/5.6/3.png)
+![](images/5-Workshop/5.6/3.png)
 
 #### Configure ProjectImportLambda
 
@@ -36,8 +36,8 @@ Repeat the steps above to create a total of 5 Lambda functions for the system:
    * `DB_USER`
    * `SOURCE_CODE_BUCKET`
 
-![](/images/5-Workshop/5.6/4.png)
-![](/images/5-Workshop/5.6/5.png)
+![](images/5-Workshop/5.6/4.png)
+![](images/5-Workshop/5.6/5.png)
 
 4. Still under the **Configuration** tab, select **VPC** from the left menu → Click **Edit**.
 5. Select the project's **VPC**.
@@ -45,8 +45,8 @@ Repeat the steps above to create a total of 5 Lambda functions for the system:
 7. Select the default **Security groups** of the VPC.
 8. Click **Save**.
 
-![](/images/5-Workshop/5.6/6.png)
-![](/images/5-Workshop/5.6/7.png)
+![](images/5-Workshop/5.6/6.png)
+![](images/5-Workshop/5.6/7.png)
 
 #### Configure RagContextLambda
 
@@ -60,14 +60,14 @@ Similar to `ProjectImportLambda`, the `RagContextLambda` function requires envir
    * `SOURCE_CODE_BUCKET`
    * `GEMINI_API_KEY` *(Note: This is based on the legacy configuration in the image; adjust accordingly if using Bedrock Mantle).*
 
-![](/images/5-Workshop/5.6/8.png)
+![](images/5-Workshop/5.6/8.png)
 
 3. Switch to the **VPC** section → Click **Edit**.
 4. Set up the **VPC**, **Subnets**, and **Security groups** exactly as done for the import function.
 5. Click **Save**.
 
-![](/images/5-Workshop/5.6/9.png)
-![](/images/5-Workshop/5.6/10.png)
+![](images/5-Workshop/5.6/9.png)
+![](images/5-Workshop/5.6/10.png)
 #### Configure ResultAndHistoryLambda
 
 This function is responsible for saving the generated Unit Test results and history to the database, so it requires similar connection configurations.
@@ -79,14 +79,14 @@ This function is responsible for saving the generated Unit Test results and hist
    * `DB_URL`
    * `DB_USER`
 
-![](/images/5-Workshop/5.6/11.png)
+![](images/5-Workshop/5.6/11.png)
 
 4. Still under the **Configuration** tab, select **VPC** from the left menu → Click **Edit**.
 5. Select the **VPC**, **Subnets** (Private Subnets), and **Security groups** just like in previous steps to ensure the function can communicate internally with the database.
 6. Click **Save** to apply the configuration.
 
-![](/images/5-Workshop/5.6/12.png)
-![](/images/5-Workshop/5.6/13.png)
+![](images/5-Workshop/5.6/12.png)
+![](images/5-Workshop/5.6/13.png)
 
 #### Configure BedrockInvokeLambda
 
@@ -96,7 +96,7 @@ This function acts as the direct communicator with the AI (Bedrock Mantle) to ge
 2. Switch to the **Configuration** tab → **Environment variables** → Click **Edit**.
 3. Add the environment variable containing the API key for authentication (the example image uses `OpenAi`, adjust the variable name if using a different system).
 
-![](/images/5-Workshop/5.6/14.png)
+![](images/5-Workshop/5.6/14.png)
 
 #### Configure FileTreeLambda
 
@@ -107,4 +107,4 @@ This function is tasked with reading and analyzing the project's File Tree struc
 3. Add the environment variable pointing to the source code repository:
    * `S3_BUCKET_NAME` (e.g., `zerobug-source-code-hutech-2026`)
 
-![](/images/5-Workshop/5.6/15.png)
+![](images/5-Workshop/5.6/15.png)

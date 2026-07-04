@@ -11,9 +11,9 @@ pre: " <b> 5.3.5. </b> "
 1. **Internet gateways** → **Create internet gateway** → Name: `zerobug-igw` → **Create**.
 2. Chọn IGW → **Actions** → **Attach to VPC** → `zerobug-vpc` → **Attach**.
 
-![](/images/5-Workshop/5.3/31.jpg)
-![](/images/5-Workshop/5.3/32.png)
-![](/images/5-Workshop/5.3/33.png)
+![](images/5-Workshop/5.3/31.jpg)
+![](images/5-Workshop/5.3/32.png)
+![](images/5-Workshop/5.3/33.png)
 
 #### NAT Gateway
 
@@ -27,8 +27,8 @@ NAT cho phép subnet **private** ra internet: EC2/SSM, tải artifact S3, và La
 6. → **Create**. Đợi **Available** (vài phút).
 7. Copy **NAT Gateway ID**.
 
-![](/images/5-Workshop/5.3/34.png)
-![](/images/5-Workshop/5.3/35.png)
+![](images/5-Workshop/5.3/34.png)
+![](images/5-Workshop/5.3/35.png)
 
 {{% notice warning %}}
 **NAT không free tier** (~0.045 USD/giờ). Chỉ tạo **1 NAT** (không mỗi AZ một cái). Xóa + release Elastic IP khi xong (mục 5.10).

@@ -19,8 +19,8 @@ pre: " <b> 5.3.7. </b> "
 
 Outbound: default All traffic.
 
-![](/images/5-Workshop/5.3/42.png)
-![](/images/5-Workshop/5.3/43.png)
+![](images/5-Workshop/5.3/42.png)
+![](images/5-Workshop/5.3/43.png)
 
 #### `zerobug-ec2-sg`
 
@@ -33,7 +33,7 @@ Outbound: default All traffic.
 | --- | --- | --- |
 | **All traffic** | All | `0.0.0.0/0` |
 
-![](/images/5-Workshop/5.3/44.png)
+![](images/5-Workshop/5.3/44.png)
 
 {{% notice tip %}}
 If **Outbound rules = 0**: EC2 cannot call S3, Secrets, RDS, or the internet. Toàn will hit errors during deploy. Always add **All traffic → 0.0.0.0/0**.
@@ -44,7 +44,7 @@ If **Outbound rules = 0**: EC2 cannot call S3, Secrets, RDS, or the internet. To
 - Inbound: not required.
 - Outbound: **All traffic** → `0.0.0.0/0` *(HTTPS to Bedrock Mantle `us-east-1`)*.
 
-![](/images/5-Workshop/5.3/45.png)
+![](images/5-Workshop/5.3/45.png)
 
 #### `zerobug-rds-sg`
 
@@ -55,4 +55,4 @@ If **Outbound rules = 0**: EC2 cannot call S3, Secrets, RDS, or the internet. To
 
 Copy 4 **Security Group ID**s into the parameter table.
 
-![](/images/5-Workshop/5.3/46.png)
+![](images/5-Workshop/5.3/46.png)

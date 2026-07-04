@@ -14,7 +14,7 @@ pre: " <b> 5.3.3. </b> "
 6. → **Create VPC**.
 7. Copy **VPC ID** → parameter table.
 
-![](/images/5-Workshop/5.3/18.jpg)
-![](/images/5-Workshop/5.3/19.jpg)
-![](/images/5-Workshop/5.3/20.jpg)
-![](/images/5-Workshop/5.3/21.jpg)
+![](images/5-Workshop/5.3/18.jpg)
+![](images/5-Workshop/5.3/19.jpg)
+![](images/5-Workshop/5.3/20.jpg)
+![](images/5-Workshop/5.3/21.jpg)

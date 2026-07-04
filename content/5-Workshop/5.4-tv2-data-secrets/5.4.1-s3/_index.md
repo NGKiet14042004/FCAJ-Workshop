@@ -14,12 +14,12 @@ pre: " <b> 5.4.1. </b> "
 4. **Block Public Access:** enable **all**.
 5. → **Create bucket**.
 
-![](/images/5-Workshop/5.4/1.png)
-![](/images/5-Workshop/5.4/2.png)
-![](/images/5-Workshop/5.4/3.png)
-![](/images/5-Workshop/5.4/4.png)
-![](/images/5-Workshop/5.4/5.png)
-![](/images/5-Workshop/5.4/6.png)
+![](images/5-Workshop/5.4/1.png)
+![](images/5-Workshop/5.4/2.png)
+![](images/5-Workshop/5.4/3.png)
+![](images/5-Workshop/5.4/4.png)
+![](images/5-Workshop/5.4/5.png)
+![](images/5-Workshop/5.4/6.png)
 
 #### Bucket Policy (optional)
 

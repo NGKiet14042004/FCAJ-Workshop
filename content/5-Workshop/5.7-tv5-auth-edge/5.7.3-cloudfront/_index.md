@@ -16,9 +16,9 @@ pre: " <b> 5.7.3. </b> "
 
 → **Next**.
 
-![](/images/5-Workshop/5.7/27.png)
-![](/images/5-Workshop/5.7/28.png)
-![](/images/5-Workshop/5.7/29.png)
+![](images/5-Workshop/5.7/27.png)
+![](images/5-Workshop/5.7/28.png)
+![](images/5-Workshop/5.7/29.png)
 
 #### Step 2 — Origin
 
@@ -28,7 +28,7 @@ pre: " <b> 5.7.3. </b> "
 | Origin path | `/prod` |
 | Protocol | HTTPS only |
 
-![](/images/5-Workshop/5.7/30.png)
+![](images/5-Workshop/5.7/30.png)
 
 #### Step 3 — Settings
 
@@ -37,8 +37,8 @@ pre: " <b> 5.7.3. </b> "
 - **Cache policy:** CachingDisabled.
 - **Origin request policy:** AllViewerExceptHostHeader.
 
-![](/images/5-Workshop/5.7/31.png)
-![](/images/5-Workshop/5.7/32.png)
+![](images/5-Workshop/5.7/31.png)
+![](images/5-Workshop/5.7/32.png)
 
 #### Step 4 — Review
 
@@ -47,4 +47,4 @@ pre: " <b> 5.7.3. </b> "
 - → **Create distribution** → wait for **Deployed**.
 - Copy `d....cloudfront.net` → update Cognito callback.
 
-![](/images/5-Workshop/5.7/33.png)
+![](images/5-Workshop/5.7/33.png)

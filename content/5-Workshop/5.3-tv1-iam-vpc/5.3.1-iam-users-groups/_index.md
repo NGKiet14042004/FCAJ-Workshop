@@ -14,7 +14,7 @@ Create IAM Group and Users (`tri`, `kiet`, `toan`, `hoa`, `trinh`) for the whole
 
 1. Console search bar → type `IAM` → open **IAM**.
 
-![](/images/5-Workshop/5.3/1.jpg)
+![](images/5-Workshop/5.3/1.jpg)
 
 #### Step 2 — Create Group
 
@@ -23,8 +23,8 @@ Create IAM Group and Users (`tri`, `kiet`, `toan`, `hoa`, `trinh`) for the whole
 3. **Attach permissions policies** → select **`PowerUserAccess`**.
 4. → **Create group**.
 
-![](/images/5-Workshop/5.3/2.jpg)
-![](/images/5-Workshop/5.3/3.jpg)
+![](images/5-Workshop/5.3/2.jpg)
+![](images/5-Workshop/5.3/3.jpg)
 
 #### Step 3 — Inline PassRole policy
 
@@ -83,10 +83,10 @@ Repeat for `tri`, `kiet`, `toan`, `hoa`, `trinh` (Trí, Kiệt, Toàn, Hoa, Trin
 4. **Add user to group** → select `zerobug-team`.
 5. → **Create user**.
 
-![](/images/5-Workshop/5.3/4.jpg)
-![](/images/5-Workshop/5.3/5.jpg)
-![](/images/5-Workshop/5.3/6.jpg)
-![](/images/5-Workshop/5.3/7.jpg)
+![](images/5-Workshop/5.3/4.jpg)
+![](images/5-Workshop/5.3/5.jpg)
+![](images/5-Workshop/5.3/6.jpg)
+![](images/5-Workshop/5.3/7.jpg)
 
 #### Step 5 — Save Console sign-in URL
 

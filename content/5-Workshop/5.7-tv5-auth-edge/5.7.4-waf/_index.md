@@ -27,11 +27,11 @@ To attach WAF to **CloudFront**, switch the Console region (top right) to **ap-s
 7. **Name:** `zerobug-waf`.
 8. → **Create**.
 
-![](/images/5-Workshop/5.7/34.png)
-![](/images/5-Workshop/5.7/35.png)
-![](/images/5-Workshop/5.7/36.png)
-![](/images/5-Workshop/5.7/37.png)
-![](/images/5-Workshop/5.7/38.png)
+![](images/5-Workshop/5.7/34.png)
+![](images/5-Workshop/5.7/35.png)
+![](images/5-Workshop/5.7/36.png)
+![](images/5-Workshop/5.7/37.png)
+![](images/5-Workshop/5.7/38.png)
 
 #### Step 2 — Add managed rule groups
 
@@ -41,10 +41,10 @@ To attach WAF to **CloudFront**, switch the Console region (top right) to **ap-s
    - **Known bad inputs**
 3. → **Add rules**.
 
-![](/images/5-Workshop/5.7/39.png)
-![](/images/5-Workshop/5.7/40.png)
-![](/images/5-Workshop/5.7/41.png)
-![](/images/5-Workshop/5.7/42.png)
+![](images/5-Workshop/5.7/39.png)
+![](images/5-Workshop/5.7/40.png)
+![](images/5-Workshop/5.7/41.png)
+![](images/5-Workshop/5.7/42.png)
 
 #### Step 3 — Add rate limit rule
 
@@ -54,9 +54,9 @@ To attach WAF to **CloudFront**, switch the Console region (top right) to **ap-s
 4. **Action:** **Block**.
 5. → **Add rule**.
 
-![](/images/5-Workshop/5.7/43.png)
-![](/images/5-Workshop/5.7/44.png)
-![](/images/5-Workshop/5.7/45.png)
+![](images/5-Workshop/5.7/43.png)
+![](images/5-Workshop/5.7/44.png)
+![](images/5-Workshop/5.7/45.png)
 
 #### Verification
 

@@ -18,17 +18,17 @@ pre: " <b> 5.3.4. </b> "
 
 3. → **Create subnet**. Copy 4 **Subnet ID**s.
 
-![](/images/5-Workshop/5.3/22.jpg)
-![](/images/5-Workshop/5.3/23.jpg)
-![](/images/5-Workshop/5.3/24.jpg)
-![](/images/5-Workshop/5.3/25.jpg)
-![](/images/5-Workshop/5.3/26.jpg)
-![](/images/5-Workshop/5.3/27.jpg)
+![](images/5-Workshop/5.3/22.jpg)
+![](images/5-Workshop/5.3/23.jpg)
+![](images/5-Workshop/5.3/24.jpg)
+![](images/5-Workshop/5.3/25.jpg)
+![](images/5-Workshop/5.3/26.jpg)
+![](images/5-Workshop/5.3/27.jpg)
 
 #### Enable auto-assign public IP (public subnets)
 
 - Select `zerobug-public-a` → **Actions** → **Edit subnet settings** → **Enable auto-assign public IPv4 address** → **Save**.
 - Repeat for `zerobug-public-b`.
 
-![](/images/5-Workshop/5.3/28.jpg)
-![](/images/5-Workshop/5.3/29.jpg)
+![](images/5-Workshop/5.3/28.jpg)
+![](images/5-Workshop/5.3/29.jpg)

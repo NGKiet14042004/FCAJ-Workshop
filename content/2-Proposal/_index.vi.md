@@ -139,7 +139,7 @@ Xác thực Mantle: Bearer token **`BEDROCK_MANTLE_API_KEY`** trên biến môi 
 
 #### 3.1. Sơ đồ kiến trúc
 
-![ZeroBug Agent Architecture](/images/2-Proposal/architecture.png)
+![ZeroBug Agent Architecture](images/2-Proposal/architecture.png)
 
 #### 3.2. Dịch vụ AWS (production)
 

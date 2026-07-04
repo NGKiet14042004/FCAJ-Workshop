@@ -14,11 +14,11 @@ pre: " <b> 5.4.3. </b> "
 4. Secret name: **`zerobug/rds/credentials`** → **Store**.
 5. Copy **Secret ARN**.
 
-![](/images/5-Workshop/5.4/23.png)
-![](/images/5-Workshop/5.4/24.png)
-![](/images/5-Workshop/5.4/25.png)
-![](/images/5-Workshop/5.4/26.png)
-![](/images/5-Workshop/5.4/27.png)
+![](images/5-Workshop/5.4/23.png)
+![](images/5-Workshop/5.4/24.png)
+![](images/5-Workshop/5.4/25.png)
+![](images/5-Workshop/5.4/26.png)
+![](images/5-Workshop/5.4/27.png)
 
 #### Verify read permissions
 

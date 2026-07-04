@@ -16,10 +16,10 @@ pre: " <b> 5.6.3. </b> "
 3. Tại giao diện **Add permissions**, tìm và tích chọn chính sách `AmazonSSMManagedInstanceCore` (Quyền cơ bản giúp quản trị viên kết nối từ xa vào EC2 một cách bảo mật).
 4. Tiến tới bước cuối cùng, đặt tên Role là `ZeroBug-App-Role` rồi nhấn **Create role** để hoàn tất.
 
-![](/images/5-Workshop/5.6/18.png)
-![](/images/5-Workshop/5.6/19.png)
-![](/images/5-Workshop/5.6/20.png)
-![](/images/5-Workshop/5.6/21.png)
+![](images/5-Workshop/5.6/18.png)
+![](images/5-Workshop/5.6/19.png)
+![](images/5-Workshop/5.6/20.png)
+![](images/5-Workshop/5.6/21.png)
 
 #### 2. Gắn quyền kích hoạt Step Functions (Inline Policy)
 Mặc định `ZeroBug-App-Role` chưa thể can thiệp vào quy trình tự động. Ta cần nhúng thêm một chính sách riêng biệt (Inline Policy) để mở quyền này:
@@ -27,7 +27,7 @@ Mặc định `ZeroBug-App-Role` chưa thể can thiệp vào quy trình tự đ
 1. Nhấp vào tên Role `ZeroBug-App-Role` vừa tạo trong danh sách.
 2. Tại tab **Permissions**, mở danh mục **Add permissions** → Chọn **Create inline policy**.
 
-21![](/images/5-Workshop/5.6/22.png)
+21![](images/5-Workshop/5.6/22.png)
 
 3. Chuyển trình soạn thảo sang tab **JSON** và dán đoạn mã phân quyền sau (Hãy nhớ thay thế chuỗi ARN bằng ARN State Machine thực tế của dự án):
 
@@ -46,7 +46,7 @@ Mặc định `ZeroBug-App-Role` chưa thể can thiệp vào quy trình tự đ
 ```
 Nhấn nút lưu chính sách để áp dụng quyền lực mới cho Role.
 
-![](/images/5-Workshop/5.6/23.png)
+![](images/5-Workshop/5.6/23.png)
 
 > ⚠️ **HÀNH ĐỘNG BẮT BUỘC:** Sau khi thiết lập xong Role trên IAM, bạn phải quay lại danh sách **EC2 Instances** → Tích chọn máy chủ của dự án → Chọn **Actions** → **Security** → **Modify IAM role** → Chọn đúng `ZeroBug-App-Role` vừa tạo và nhấn **Update** để máy chủ chính thức nhận quyền.
 

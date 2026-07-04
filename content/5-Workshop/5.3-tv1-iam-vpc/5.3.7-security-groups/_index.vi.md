@@ -19,8 +19,8 @@ pre: " <b> 5.3.7. </b> "
 
 Outbound: mặc định All traffic.
 
-![](/images/5-Workshop/5.3/42.png)
-![](/images/5-Workshop/5.3/43.png)
+![](images/5-Workshop/5.3/42.png)
+![](images/5-Workshop/5.3/43.png)
 
 #### `zerobug-ec2-sg`
 
@@ -33,7 +33,7 @@ Outbound: mặc định All traffic.
 | --- | --- | --- |
 | **All traffic** | All | `0.0.0.0/0` |
 
-![](/images/5-Workshop/5.3/44.png)
+![](images/5-Workshop/5.3/44.png)
 
 {{% notice tip %}}
 Nếu **Outbound rules = 0**: EC2 không gọi S3, Secrets, RDS, internet. Toàn sẽ lỗi khi deploy. Luôn thêm **All traffic → 0.0.0.0/0**.
@@ -44,7 +44,7 @@ Nếu **Outbound rules = 0**: EC2 không gọi S3, Secrets, RDS, internet. Toàn
 - Inbound: không cần.
 - Outbound: **All traffic** → `0.0.0.0/0` *(HTTPS tới Bedrock Mantle `us-east-1`)*.
 
-![](/images/5-Workshop/5.3/45.png)
+![](images/5-Workshop/5.3/45.png)
 
 #### `zerobug-rds-sg`
 
@@ -55,4 +55,4 @@ Nếu **Outbound rules = 0**: EC2 không gọi S3, Secrets, RDS, internet. Toàn
 
 Copy 4 **Security Group ID** vào bảng tham số.
 
-![](/images/5-Workshop/5.3/46.png)
+![](images/5-Workshop/5.3/46.png)

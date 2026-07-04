@@ -26,8 +26,8 @@ pre: " <b> 1. </b> "
 
 **Week 9:** [ZeroBug Agent project planning and architecture design](1.9-week9/)
 
-**Week 10:** [Deploy the Data & Secrets layer (TV2) for ZeroBug Agent](1.10-week10/)
+**Week 10:** [Deploy data storage for ZeroBug Agent](1.10-week10/)
 
-**Week 11:** [Monitor, test, and debug the ZeroBug Agent data layer](1.11-week11/)
+**Week 11:** [Test and monitor project data layer](1.11-week11/)
 
 **Week 12:** [Finalize project, documentation, and acceptance](1.12-week12/)

@@ -8,8 +8,8 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Objectives:
 
-* Finalize documentation and evidence for the **TV2 layer** (S3, RDS, Secrets, pgvector, Bedrock).
-* Prepare demo, thesis report, and data-layer resource cleanup per Workshop section 5.10.4.
+* Finalize documentation and evidence for the data deployment work.
+* Prepare report, slides, and clean up AWS resources after acceptance.
 * Accept the ZeroBug Agent project with the team before the defense.
 
 ### Tasks to be carried out this week:
@@ -33,49 +33,49 @@ pre: " <b> 1.12. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Final review of TV2: S3, RDS, Secret, pgvector, Bedrock model access running stably <br> - Confirm the shared parameter table is complete before demo</td>
+      <td class="col-task">- Final review of storage, database, and AI access <br> - Confirm the shared information table is complete before demo</td>
       <td class="col-date">07/06/2026</td>
       <td class="col-date">07/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">2</td>
-      <td class="col-task">- Compile Deployment Guide for Kiet's scope: S3, RDS, Secrets Manager, pgvector, Bedrock Mantle model access <br> - Capture evidence: RDS Console, Secrets, `\d code_embeddings`, Bedrock Model access</td>
+      <td class="col-task">- Compile deployment guide for assigned work <br> - Capture screenshots of the running system for the report appendix</td>
       <td class="col-date">07/07/2026</td>
       <td class="col-date">07/07/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">3</td>
-      <td class="col-task">- Write thesis chapter "Data & Secrets Layer Deployment on AWS" (TV2) <br> - Describe lightweight RAG: pgvector `code_embeddings`, Mantle chat + embedding cross-region</td>
+      <td class="col-task">- Write report chapter on deploying the data layer on AWS <br> - Describe how storage, database, and AI integration were set up</td>
       <td class="col-date">07/08/2026</td>
       <td class="col-date">07/08/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">4</td>
-      <td class="col-task">- Prepare slides: TV2 role, data flow diagram S3 → RDS → Bedrock Mantle <br> - Record a short demo video of the data infrastructure for the appendix</td>
+      <td class="col-task">- Record a short demo video as a backup</td>
       <td class="col-date">07/09/2026</td>
       <td class="col-date">07/09/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">5</td>
-      <td class="col-task">- Defense Dry Run: questions on RDS private subnet, Secrets Manager, pgvector, Bedrock model access <br> - Explain why application schema is created by Toan (JPA) and vector table by Kiet</td>
+      <td class="col-task">- Practice for defense: questions on database, security, and AI integration <br> - Explain assigned work clearly and how to coordinate with the team</td>
       <td class="col-date">07/10/2026</td>
       <td class="col-date">07/10/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Verify data layer ready for Live Demo; confirm RDS metrics and S3 bucket have demo data <br> - Prepare Kiet cleanup checklist: RDS → Subnet Group → Secrets → S3 empty + delete</td>
+      <td class="col-task">- Verify the system is ready for live demo <br> - Prepare cleanup checklist for database and storage resources</td>
       <td class="col-date">07/11/2026</td>
       <td class="col-date">07/11/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">7</td>
-      <td class="col-task">- Complete report, slides, and store source/Workshop docs on Git <br> - After acceptance: clean up RDS, DB Subnet Group, Secret `zerobug/rds/credentials`, S3 bucket per 5.10.4 order</td>
+      <td class="col-task">- Complete report and save documents to Git <br> - After acceptance: clean up database, secrets, and storage in the correct order</td>
       <td class="col-date">07/12/2026</td>
       <td class="col-date">07/12/2026</td>
       <td class="col-ref"></td>
@@ -86,6 +86,6 @@ pre: " <b> 1.12. </b> "
 
 ### Week 12 Achievements:
 
-* Completed deployment documentation and thesis section for TV2 — Data & Secrets layer.
-* ZeroBug Agent demo stable; ready to answer questions on S3, RDS, Secrets, pgvector, and Bedrock Mantle.
-* Data-layer resources cleaned up per Workshop procedure, avoiding post-acceptance RDS/S3 costs.
+* Completed deployment documentation and the related report section on the data layer.
+* Ready for demo and to answer questions about assigned work.
+* Resources cleaned up properly to avoid extra costs after acceptance.

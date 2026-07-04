@@ -33,7 +33,7 @@ pre: " <b> 1.1. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Explore AWS Free Tier 2025 overview and major changes <br> - Analyze and compare Free Plan vs. Paid Plan in detail</td>
+      <td class="col-task">- Create AWS account <br> - Explore AWS Free Tier 2026 overview and major changes <br> - Analyze and compare Free Plan vs. Paid Plan in detail</td>
       <td class="col-date">04/20/2026</td>
       <td class="col-date">04/20/2026</td>
       <td class="col-ref">https://000001.awsstudygroup.com</td>
@@ -68,7 +68,7 @@ pre: " <b> 1.1. </b> "
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Answer common questions using the FAQ documentation <br> - Build a long-term AWS Learning Roadmap combined with Free Tier usage</td>
+      <td class="col-task">- Answer common questions using the FAQ documentation</td>
       <td class="col-date">04/25/2026</td>
       <td class="col-date">04/25/2026</td>
       <td class="col-ref">https://000001.awsstudygroup.com</td>

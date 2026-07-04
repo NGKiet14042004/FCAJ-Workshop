@@ -26,8 +26,8 @@ pre: " <b> 1. </b> "
 
 **Tuần 9:** [Lập kế hoạch và thiết kế kiến trúc đồ án ZeroBug Agent](1.9-week9/)
 
-**Tuần 10:** [Triển khai lớp dữ liệu & bí mật (TV2) cho ZeroBug Agent](1.10-week10/)
+**Tuần 10:** [Triển khai phần lưu trữ dữ liệu cho ZeroBug Agent](1.10-week10/)
 
-**Tuần 11:** [Giám sát, kiểm thử và debug khối dữ liệu ZeroBug Agent](1.11-week11/)
+**Tuần 11:** [Kiểm thử và giám sát phần dữ liệu đồ án](1.11-week11/)
 
 **Tuần 12:** [Hoàn thiện đồ án, tài liệu và nghiệm thu](1.12-week12/)

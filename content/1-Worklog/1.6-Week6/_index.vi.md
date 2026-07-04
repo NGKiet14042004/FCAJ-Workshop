@@ -33,7 +33,7 @@ pre: " <b> 1.6. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Tìm hiểu tổng quan Amazon S3: đặc tính kỹ thuật (độ bền 99.999999999%), các case sử dụng thực tế <br> - Nghiên cứu AWS Amplify Hosting thay thế host website tĩnh truyền thống</td>
+      <td class="col-task">- Tìm hiểu tổng quan Amazon S3: đặc tính kỹ thuật (độ bền 99.9%), các case sử dụng thực tế <br> - Nghiên cứu AWS Amplify Hosting thay thế host website tĩnh truyền thống</td>
       <td class="col-date">25/05/2026</td>
       <td class="col-date">25/05/2026</td>
       <td class="col-ref">https://000057.awsstudygroup.com</td>
@@ -90,4 +90,4 @@ pre: " <b> 1.6. </b> "
 * Thành thạo cấu hình và bảo mật Static Website Host trên S3, kết hợp CloudFront để tăng tốc và bảo mật hạ tầng.
 * Làm chủ kỹ thuật quản lý vòng đời dữ liệu: Versioning, Migration và Multi-Region Replication.
 * Tuân thủ quy trình dọn dẹp hạ tầng S3/CloudFront chuẩn xác, kiểm soát tốt chi phí sử dụng.
-* Nắm nền tảng S3 phục vụ giai đoạn sau: bucket **private** cho source/JAR đồ án ZeroBug Agent (khác Static Website Hosting lab tuần này).
+* Nắm thêm kiến thức S3 làm nền tảng cho phần lưu trữ dữ liệu trong đồ án nhóm sau này.

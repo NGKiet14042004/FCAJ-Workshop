@@ -33,7 +33,7 @@ pre: " <b> 1.1. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Tìm hiểu tổng quan những thay đổi của AWS Free Tier 2025 <br> - Phân tích, so sánh chi tiết giữa Gói miễn phí (Free Plan) và Gói trả phí (Paid Plan)</td>
+      <td class="col-task">- Đăng ký tài khoản AWS <br> - Tìm hiểu tổng quan những thay đổi của AWS Free Tier 2026 <br> - Phân tích, so sánh chi tiết giữa Gói miễn phí (Free Plan) và Gói trả phí (Paid Plan)</td>
       <td class="col-date">20/04/2026</td>
       <td class="col-date">20/04/2026</td>
       <td class="col-ref">https://000001.awsstudygroup.com</td>
@@ -68,7 +68,7 @@ pre: " <b> 1.1. </b> "
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Giải đáp các thắc mắc thường gặp qua bộ tài liệu FAQ <br> - Xây dựng lộ trình học tập AWS dài hạn (AWS Learning Roadmap) kết hợp với Free Tier</td>
+      <td class="col-task">- Giải đáp các thắc mắc thường gặp qua bộ tài liệu FAQ</td>
       <td class="col-date">25/04/2026</td>
       <td class="col-date">25/04/2026</td>
       <td class="col-ref">https://000001.awsstudygroup.com</td>

@@ -8,9 +8,9 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Triển khai **khối TV2 — Lớp dữ liệu & bí mật** cho ZeroBug Agent theo Workshop mục 5.4.
-* Thiết lập S3, RDS PostgreSQL, Secrets Manager, pgvector và bật Bedrock Mantle model access.
-* Hoàn thành checklist kiểm tra và bàn giao tham số cho Toàn và Hoa.
+* Triển khai phần lưu trữ dữ liệu và quản lý thông tin nhạy cảm cho đồ án ZeroBug Agent.
+* Thiết lập dịch vụ lưu file, cơ sở dữ liệu và bật quyền truy cập model AI cần thiết.
+* Hoàn thành kiểm tra và bàn giao thông tin cho Toàn và Hoa.
 
 ### Các công việc cần triển khai trong tuần này:
 <table class="worklog-table">
@@ -33,49 +33,49 @@ pre: " <b> 1.10. </b> "
   <tbody>
     <tr>
       <td class="col-day">1</td>
-      <td class="col-task">- Nhận bàn giao từ Trí: Private Subnet A/B, `zerobug-rds-sg`, ARN `zerobug-ec2-role` & `zerobug-lambda-role` <br> - Rà soát bảng tham số chung và chuẩn bị triển khai TV2</td>
+      <td class="col-task">- Công việc được giao: nhận bàn giao từ Trí sau khi phần mạng và phân quyền cơ bản đã xong <br> - Rà soát bảng thông tin chung và chuẩn bị triển khai</td>
       <td class="col-date">22/06/2026</td>
       <td class="col-date">22/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">2</td>
-      <td class="col-task">- Tạo S3 bucket private `zerobug-projects-<suffix>` (ap-southeast-1), bật Block Public Access <br> - Test upload/download; ghi tên bucket vào bảng tham số</td>
+      <td class="col-task">- Công việc được giao: tạo bucket lưu trữ file riêng tư cho dự án <br> - Thử upload và tải file; ghi lại thông tin vào bảng chung</td>
       <td class="col-date">23/06/2026</td>
       <td class="col-date">23/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">3</td>
-      <td class="col-task">- Tạo DB Subnet Group và RDS PostgreSQL 15.x (`zerobug-db`) trong Private Subnet, Public access = No <br> - Copy RDS endpoint; DB name `zerobug`</td>
+      <td class="col-task">- Công việc được giao: khởi tạo cơ sở dữ liệu PostgreSQL trên mạng nội bộ <br> - Lưu thông tin kết nối để nhóm sử dụng sau</td>
       <td class="col-date">24/06/2026</td>
       <td class="col-date">24/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">4</td>
-      <td class="col-task">- Lưu credential RDS vào Secrets Manager (`zerobug/rds/credentials`), copy Secret ARN <br> - Chạy SQL pgvector: `CREATE EXTENSION vector` + bảng `code_embeddings` (vector 1024)</td>
+      <td class="col-task">- Công việc được giao: lưu thông tin đăng nhập database vào dịch vụ quản lý secret <br> - Chuẩn bị cấu trúc dữ liệu phục vụ tính năng AI trên cơ sở dữ liệu</td>
       <td class="col-date">25/06/2026</td>
       <td class="col-date">25/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">5</td>
-      <td class="col-task">- Bật Bedrock Mantle model access region `us-east-1`: `openai.gpt-oss-120b` và `cohere.embed-multilingual-v3` <br> - Ghi Mantle base URL, model ID, embedding dimension vào bảng tham số</td>
+      <td class="col-task">- Công việc được giao: bật quyền truy cập model AI cần dùng cho chat và embedding <br> - Ghi các thông số liên quan vào bảng chung cho nhóm</td>
       <td class="col-date">26/06/2026</td>
       <td class="col-date">26/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">6</td>
-      <td class="col-task">- Chạy checklist xác nhận TV2: S3, RDS Available, Secret, pgvector, Bedrock Access granted <br> - Không tạo bảng ứng dụng bằng tay — để Toàn deploy JPA (`ddl-auto=update`)</td>
+      <td class="col-task">- Chạy checklist kiểm tra phần việc đã hoàn thành <br> - Xác nhận các thành phần hoạt động ổn định trước khi bàn giao</td>
       <td class="col-date">27/06/2026</td>
       <td class="col-date">27/06/2026</td>
       <td class="col-ref"></td>
     </tr>
     <tr>
       <td class="col-day">7</td>
-      <td class="col-task">- Bàn giao Toàn: S3 bucket, RDS endpoint, Secret ARN DB <br> - Bàn giao Hoa: S3, Secret DB, RDS endpoint, Mantle URL/model, bảng `code_embeddings`, RAG top-k</td>
+      <td class="col-task">- Bàn giao thông tin lưu trữ và database cho Toàn <br> - Bàn giao thông tin AI và database cho Hoa để triển khai tiếp</td>
       <td class="col-date">28/06/2026</td>
       <td class="col-date">28/06/2026</td>
       <td class="col-ref"></td>
@@ -86,6 +86,6 @@ pre: " <b> 1.10. </b> "
 
 ### Kết quả đạt được tuần 10:
 
-* Hoàn thành khối TV2: S3 private, RDS PostgreSQL, Secrets Manager, pgvector + `code_embeddings`.
-* Bật thành công Bedrock Mantle model access (chat + embedding) ở `us-east-1`.
-* Bảng tham số chung đã điền đủ; bàn giao thành công cho Toàn và Hoa theo checklist Workshop.
+* Hoàn thành phần lưu trữ file, cơ sở dữ liệu và quản lý thông tin đăng nhập.
+* Bật thành công quyền truy cập model AI cho nhóm.
+* Bàn giao thông tin đầy đủ cho Toàn và Hoa; nhóm tiếp tục triển khai các phần còn lại.

@@ -327,3 +327,4 @@ With **AWS Free Tier** (EC2, RDS, etc.), remaining non–free-tier items are mai
 - End-to-end AWS deployment per Workshop: CloudFront, WAF, API Gateway, ALB, Cognito, EC2, Step Functions, Lambda, S3, RDS, pgvector, Bedrock Mantle, Secrets Manager, CloudWatch, SNS, Budgets.
 - AI integrated into the QA workflow with RAG and cost control (~54 USD/month estimated).
 - Proposal, Workshop, and report documentation aligned with the actually deployed system.
+- Live demo (web URL + video): see [Workshop 5.8 — End-to-end testing](../5-Workshop/5.8-end-to-end-testing/).

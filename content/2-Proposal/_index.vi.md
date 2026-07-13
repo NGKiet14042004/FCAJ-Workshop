@@ -327,3 +327,4 @@ Nếu còn **AWS Free Tier** (EC2, RDS…), các hạng mục không free tier c
 - Triển khai AWS end-to-end theo Workshop: CloudFront, WAF, API Gateway, ALB, Cognito, EC2, Step Functions, Lambda, S3, RDS, pgvector, Bedrock Mantle, Secrets Manager, CloudWatch, SNS, Budgets.
 - Tích hợp AI vào quy trình QA với RAG và kiểm soát chi phí (~54 USD/tháng ước tính).
 - Tài liệu Proposal, Workshop và báo cáo khớp với hệ thống triển khai thực tế.
+- Demo thực tế (link web + video): xem [Workshop 5.8 — Kiểm thử end-to-end](../5-Workshop/5.8-end-to-end-testing/).

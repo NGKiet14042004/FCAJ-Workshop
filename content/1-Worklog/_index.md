@@ -6,11 +6,11 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-**On this page** you will find the worklog recorded over **12 weeks** of the First Cloud Journey internship (Apr 20 – Jul 12, 2026). The process includes AWS Cloud Journey learning, knowledge review, project planning, and AWS infrastructure deployment for the **ZeroBug Agent** project.
+**On this page** you will find the worklog recorded over **12 weeks** of the First Cloud Journey internship (Apr 17 – Jul 12, 2026). The process includes AWS Cloud Journey learning, knowledge review, project planning, and AWS infrastructure deployment for the **ZeroBug Agent** project.
 
 **Week 1:** [AWS registration, Module 01 fundamentals, and AWS Credits](1.1-week1/)
 
-**Week 2:** [AWS global infrastructure, management tools, and AWS Budgets Labs](1.2-week2/)
+**Week 2:** [AWS Budget, IAM Users/Groups/Roles, and access security Labs](1.2-week2/)
 
 **Week 3:** [IAM, VPC, EC2, and Site-to-Site VPN](1.3-week3/)
 
